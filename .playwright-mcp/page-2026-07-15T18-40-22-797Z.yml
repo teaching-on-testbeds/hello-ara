@@ -1,0 +1,196 @@
+- generic [active] [ref=f55e1]:
+  - navigation [ref=f55e2]:
+    - generic [ref=f55e3]:
+      - link [ref=f55e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f55e6]
+      - generic [ref=f55e7]:
+        - list [ref=f55e8] [cursor=pointer]:
+          - listitem [ref=f55e9]:
+            - button " New York University  nyunetworks " [ref=f55e10]:
+              - generic [ref=f55e11]: 
+              - generic [ref=f55e12]:
+                - text: New York University
+                - generic [ref=f55e13]: 
+                - text: nyunetworks
+              - generic [ref=f55e14]: 
+            - text:  
+        - list [ref=f55e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f55e16]:
+            - button " ffund@nyu.edu " [ref=f55e17]:
+              - generic [ref=f55e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f55e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f55e20]:
+    - navigation [ref=f55e22]:
+      - list [ref=f55e23] [cursor=pointer]:
+        - listitem [ref=f55e24]:
+          - generic [ref=f55e25]:
+            - text: Project
+            - generic [ref=f55e26]: 
+          - list [ref=f55e27]:
+            - link "Jupyter Notebook" [ref=f55e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f55e30]:
+              - generic [ref=f55e31]:
+                - text: Summary
+                - generic [ref=f55e32]: 
+            - listitem [ref=f55e33]:
+              - generic [ref=f55e34]:
+                - text: Container
+                - generic [ref=f55e35]: 
+              - link "Containers" [ref=f55e37]:
+                - /url: /project/container/containers/
+            - listitem [ref=f55e38]:
+              - generic [ref=f55e39]:
+                - text: Network
+                - generic [ref=f55e40]: 
+            - listitem [ref=f55e41]:
+              - generic [ref=f55e42]:
+                - text: Orchestration
+                - generic [ref=f55e43]: 
+            - listitem [ref=f55e44]:
+              - generic [ref=f55e45]:
+                - text: Object Store
+                - generic [ref=f55e46]: 
+            - listitem [ref=f55e47]:
+              - generic [ref=f55e48]:
+                - text: Reservations
+                - generic [ref=f55e49]: 
+        - listitem [ref=f55e50]:
+          - generic [ref=f55e51]:
+            - text: Identity
+            - generic [ref=f55e52]: 
+        - listitem [ref=f55e53]:
+          - generic [ref=f55e54]:
+            - text: Data
+            - generic [ref=f55e55]: 
+    - generic [ref=f55e59]:
+      - list [ref=f55e61]:
+        - listitem [ref=f55e62]: Project
+        - listitem [ref=f55e63]: / Container
+        - listitem [ref=f55e64]: / Containers
+      - generic [ref=f55e199]:
+        - generic [ref=f55e200]:
+          - list [ref=f55e201]:
+            - listitem [ref=f55e202]:
+              - link "Back" [ref=f55e203] [cursor=pointer]:
+                - /url: javascript:history.back()
+          - generic [ref=f55e204]:
+            - generic [ref=f55e205]: hello-ara-sandbox-002
+            - generic [ref=f55e208]:
+              - button [ref=f55e209] [cursor=pointer]
+              - button " Toggle Dropdown" [ref=f55e211] [cursor=pointer]:
+                - generic [ref=f55e212]: 
+                - generic [ref=f55e213]: Toggle Dropdown
+              - text:  
+        - generic [ref=f55e216]:
+          - list [ref=f55e217] [cursor=pointer]:
+            - listitem [ref=f55e218]:
+              - link "Overview" [ref=f55e219]:
+                - /url: ""
+            - listitem [ref=f55e220]:
+              - link "Logs" [ref=f55e221]:
+                - /url: ""
+            - listitem [ref=f55e222]:
+              - link "Console" [ref=f55e223]:
+                - /url: ""
+          - generic [ref=f55e227]:
+            - generic [ref=f55e228]:
+              - generic [ref=f55e229]:
+                - heading "Info" [level=3] [ref=f55e230]
+                - separator [ref=f55e231]
+                - generic [ref=f55e234]:
+                  - generic [ref=f55e236]:
+                    - term [ref=f55e237]: ID
+                    - definition [ref=f55e238]: b7205379-261e-4d44-9eca-2dd27e4ef8ae
+                  - generic [ref=f55e240]:
+                    - term [ref=f55e241]: Name
+                    - definition [ref=f55e242]: hello-ara-sandbox-002
+                  - generic [ref=f55e244]:
+                    - term [ref=f55e245]: Status
+                    - definition [ref=f55e246]: Running
+                  - generic [ref=f55e248]:
+                    - term [ref=f55e249]: Status Detail
+                    - definition [ref=f55e250]: Up 2 mins
+                  - generic [ref=f55e252]:
+                    - term [ref=f55e253]: Status Reason
+                    - definition [ref=f55e254]: "-"
+                  - generic [ref=f55e256]:
+                    - term [ref=f55e257]: Task State
+                    - definition [ref=f55e258]: "-"
+                  - generic [ref=f55e260]:
+                    - term [ref=f55e261]: Command
+                    - definition [ref=f55e262]: "/bin/bash,-lc, set -eux; export DEBIAN_FRONTEND=noninteractive; retry() { for attempt in 1 2 3 4 5 6 7 8 9 10; do \"$@\" && return 0; sleep 30; done; return 1; } retry bash -ec \" apt-get -o Acquire::Retries=5 update; apt-get -y -o Acquire::Retries=5 install openssh-server; \"; mkdir -p /run/sshd /root/.ssh; chmod 700 /root/.ssh; printf \"%s\\n\" \"$SSH_PUBLIC_KEY\" > /root/.ssh/authorized_keys; chmod 600 /root/.ssh/authorized_keys; echo \"PermitRootLogin yes\" >> /etc/ssh/sshd_config; service ssh restart || /usr/sbin/sshd; python3 /lib/uhd/utils/uhd_images_downloader.py --types b2xx || true; tail -f /dev/null;"
+              - generic [ref=f55e263]:
+                - heading "Spec" [level=3] [ref=f55e264]
+                - separator [ref=f55e265]
+                - generic [ref=f55e268]:
+                  - generic [ref=f55e270]:
+                    - term [ref=f55e271]: Image
+                    - definition [ref=f55e272]: arawirelesshub/uhd:4.7.0.0
+                  - generic [ref=f55e274]:
+                    - term [ref=f55e275]: Image Driver
+                    - definition [ref=f55e276]: docker
+                  - generic [ref=f55e278]:
+                    - term [ref=f55e279]: Image Pull Policy
+                    - definition [ref=f55e280]: "-"
+                  - generic [ref=f55e282]:
+                    - term [ref=f55e283]: Hostname
+                    - definition [ref=f55e284]: hello-ara-sandbox-002
+                  - generic [ref=f55e286]:
+                    - term [ref=f55e287]: Runtime
+                    - definition [ref=f55e288]: runc
+                  - generic [ref=f55e290]:
+                    - term [ref=f55e291]: CPU
+                    - definition [ref=f55e292]: "4"
+                  - generic [ref=f55e294]:
+                    - term [ref=f55e295]: Memory
+                    - definition [ref=f55e296]: "8192"
+                  - generic [ref=f55e298]:
+                    - term [ref=f55e299]: Disk
+                    - definition [ref=f55e300]: 0 GB
+                  - generic [ref=f55e302]:
+                    - term [ref=f55e303]: Restart Policy
+                    - definition [ref=f55e304]: "{}"
+                  - generic [ref=f55e306]:
+                    - term [ref=f55e307]: Auto Remove
+                    - definition [ref=f55e308]: "No"
+                  - generic [ref=f55e310]:
+                    - term [ref=f55e311]: Auto Heal
+                    - definition [ref=f55e312]: "No"
+                  - generic [ref=f55e314]:
+                    - term [ref=f55e315]: Addresses
+                    - definition [ref=f55e316]: "[ { \"Port IP address\": \"10.0.4.176\", \"Floating IP address\": \"10.189.10.70\" } ]"
+                  - generic [ref=f55e318]:
+                    - term [ref=f55e319]: Ports
+                    - definition [ref=f55e320]: "[]"
+                  - generic [ref=f55e322]:
+                    - term [ref=f55e323]: Security Groups
+                    - definition [ref=f55e324]: "[]"
+            - generic [ref=f55e326]:
+              - heading "Miscellaneous" [level=3] [ref=f55e327]
+              - separator [ref=f55e328]
+              - generic [ref=f55e331]:
+                - generic [ref=f55e333]:
+                  - term [ref=f55e334]: Host
+                  - definition [ref=f55e335]: Sandbox-Host-002
+                - generic [ref=f55e337]:
+                  - term [ref=f55e338]: Workdir
+                  - definition [ref=f55e339]: "-"
+                - generic [ref=f55e341]:
+                  - term [ref=f55e342]: Environment
+                  - definition [ref=f55e343]: "{ \"SSH_PUBLIC_KEY\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCe/AJCOFjZjUtutpH20lLvbPANsPAqGQXHkEAKIc+EW2zdzPnwcx2wKdVWvky7pLn1Kt9FjbpeiQahpy54T4f3FNazyYzH574BhTCaTMWJA8akbn/iLhSPVRa3KDMteoKQsPSPo784PuEjp3J5klnkv9IJ8rBM3ZirGSaIGGpz6Y/zXBSxLto7CNVlE8gkbubY99mBR38MVQSoJgPov1bWyoy8phnB3lQEbUgRh8aO1+HDriqXqn4rs395rlc5vbKBmFx+SB24IwCWeUSCyz2MudZbWuptDCp+oqCVnk2i6JqgEuv+CrpQWTxbTnK/U5MWZVKklojiK6Waxb8kzPUWcj4jEQFUtarz5tvn815Or0t86tAu+TL0D7A7C48Ju96XwYK59ZTtY94HXfDw/5AsN76gNtuiRNWIvB2VSuiy4eKeCY3JtDjEN6EFjWJ7BoLSDDWGpeUexlQJpoNLuBFysblFMKKDdD8CetnwTgYmmx/keJ4usLfR7aDVZL9FnK0= ffund@ffund-thinkpad\", \"reservation_id\": \"30e02b45-bffc-4efd-95ec-659d020c52ef\", \"reservation_type\": \"YAML\" }"
+                - generic [ref=f55e345]:
+                  - term [ref=f55e346]: Interactive
+                  - definition [ref=f55e347]: "No"
+                - generic [ref=f55e349]:
+                  - term [ref=f55e350]: Labels
+                  - definition [ref=f55e351]: "{}"
+                - generic [ref=f55e353]:
+                  - term [ref=f55e354]: Links
+                  - definition [ref=f55e355]: "[ { \"href\": \"http://controller1intha.ara.iastate.edu:9517/v1/containers/b7205379-261e-4d44-9eca-2dd27e4ef8ae\", \"rel\": \"self\" }, { \"href\": \"http://controller1intha.ara.iastate.edu:9517/containers/b7205379-261e-4d44-9eca-2dd27e4ef8ae\", \"rel\": \"bookmark\" } ]"

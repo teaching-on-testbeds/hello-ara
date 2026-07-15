@@ -1,0 +1,101 @@
+- generic [active] [ref=f24e1]:
+  - navigation [ref=f24e2]:
+    - generic [ref=f24e3]:
+      - link [ref=f24e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f24e6]
+      - generic [ref=f24e7]:
+        - list [ref=f24e8] [cursor=pointer]:
+          - listitem [ref=f24e9]:
+            - button " New York University  nyunetworks " [ref=f24e10]:
+              - generic [ref=f24e11]: 
+              - generic [ref=f24e12]:
+                - text: New York University
+                - generic [ref=f24e13]: 
+                - text: nyunetworks
+              - generic [ref=f24e14]: 
+            - text:  
+        - list [ref=f24e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f24e16]:
+            - button " ffund@nyu.edu " [ref=f24e17]:
+              - generic [ref=f24e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f24e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f24e20]:
+    - navigation [ref=f24e22]:
+      - list [ref=f24e23] [cursor=pointer]:
+        - listitem [ref=f24e24]:
+          - generic [ref=f24e25]:
+            - text: Project
+            - generic [ref=f24e26]: 
+          - list [ref=f24e27]:
+            - link "Jupyter Notebook" [ref=f24e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f24e30]:
+              - generic [ref=f24e31]:
+                - text: Summary
+                - generic [ref=f24e32]: 
+            - listitem [ref=f24e33]:
+              - generic [ref=f24e34]:
+                - text: Container
+                - generic [ref=f24e35]: 
+            - listitem [ref=f24e36]:
+              - generic [ref=f24e37]:
+                - text: Network
+                - generic [ref=f24e38]: 
+            - listitem [ref=f24e39]:
+              - generic [ref=f24e40]:
+                - text: Orchestration
+                - generic [ref=f24e41]: 
+              - link "Stacks" [ref=f24e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f24e44]:
+              - generic [ref=f24e45]:
+                - text: Object Store
+                - generic [ref=f24e46]: 
+            - listitem [ref=f24e47]:
+              - generic [ref=f24e48]:
+                - text: Reservations
+                - generic [ref=f24e49]: 
+        - listitem [ref=f24e50]:
+          - generic [ref=f24e51]:
+            - text: Identity
+            - generic [ref=f24e52]: 
+        - listitem [ref=f24e53]:
+          - generic [ref=f24e54]:
+            - text: Data
+            - generic [ref=f24e55]: 
+    - generic [ref=f24e59]:
+      - list [ref=f24e61]:
+        - listitem [ref=f24e62]: Project
+        - listitem [ref=f24e63]: / Orchestration
+        - listitem [ref=f24e64]:
+          - text: /
+          - link "Stacks" [ref=f24e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f24e66]: / container
+      - generic [ref=f24e67]: container
+      - generic [ref=f24e75]:
+        - generic [ref=f24e76]:
+          - term [ref=f24e77]: Stack Resource ID
+          - definition [ref=f24e78]: container
+          - term [ref=f24e79]: Resource ID
+          - definition [ref=f24e80]: 2d1c18ed-b6d6-4bee-baba-3f9290f92839
+          - term [ref=f24e81]: Stack Resource Type
+          - definition [ref=f24e82]: OS::Zun::Container
+          - term [ref=f24e83]: Description
+          - definition [ref=f24e84]
+        - heading "Status" [level=4] [ref=f24e85]
+        - separator [ref=f24e86]
+        - generic [ref=f24e87]:
+          - term [ref=f24e88]: Last Updated
+          - definition [ref=f24e89]: 2 minutes
+          - term [ref=f24e90]: Status
+          - definition [ref=f24e91]: "Create Complete: state changed"
+        - heading "Resource Metadata" [level=4] [ref=f24e92]
+        - separator [ref=f24e93]
+        - generic [ref=f24e94]: "{}"

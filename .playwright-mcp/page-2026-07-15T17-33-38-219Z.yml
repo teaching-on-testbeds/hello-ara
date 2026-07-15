@@ -1,0 +1,106 @@
+- generic [active] [ref=f9e1]:
+  - navigation [ref=f9e2]:
+    - generic [ref=f9e3]:
+      - link [ref=f9e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f9e6]
+      - generic [ref=f9e7]:
+        - list [ref=f9e8] [cursor=pointer]:
+          - listitem [ref=f9e9]:
+            - button " New York University  nyunetworks " [ref=f9e10]:
+              - generic [ref=f9e11]: 
+              - generic [ref=f9e12]:
+                - text: New York University
+                - generic [ref=f9e13]: 
+                - text: nyunetworks
+              - generic [ref=f9e14]: 
+            - text:  
+        - list [ref=f9e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f9e16]:
+            - button " ffund@nyu.edu " [ref=f9e17]:
+              - generic [ref=f9e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f9e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f9e20]:
+    - navigation [ref=f9e22]:
+      - list [ref=f9e23] [cursor=pointer]:
+        - listitem [ref=f9e24]:
+          - generic [ref=f9e25]:
+            - text: Project
+            - generic [ref=f9e26]: 
+          - list [ref=f9e27]:
+            - link "Jupyter Notebook" [ref=f9e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f9e30]:
+              - generic [ref=f9e31]:
+                - text: Summary
+                - generic [ref=f9e32]: 
+            - listitem [ref=f9e33]:
+              - generic [ref=f9e34]:
+                - text: Container
+                - generic [ref=f9e35]: 
+            - listitem [ref=f9e36]:
+              - generic [ref=f9e37]:
+                - text: Network
+                - generic [ref=f9e38]: 
+            - listitem [ref=f9e39]:
+              - generic [ref=f9e40]:
+                - text: Orchestration
+                - generic [ref=f9e41]: 
+              - link "Stacks" [ref=f9e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f9e44]:
+              - generic [ref=f9e45]:
+                - text: Object Store
+                - generic [ref=f9e46]: 
+            - listitem [ref=f9e47]:
+              - generic [ref=f9e48]:
+                - text: Reservations
+                - generic [ref=f9e49]: 
+        - listitem [ref=f9e50]:
+          - generic [ref=f9e51]:
+            - text: Identity
+            - generic [ref=f9e52]: 
+        - listitem [ref=f9e53]:
+          - generic [ref=f9e54]:
+            - text: Data
+            - generic [ref=f9e55]: 
+    - generic [ref=f9e59]:
+      - list [ref=f9e61]:
+        - listitem [ref=f9e62]: Project
+        - listitem [ref=f9e63]: / Orchestration
+        - listitem [ref=f9e64]:
+          - text: /
+          - link "Stacks" [ref=f9e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f9e66]: / hello-ara-debug-002
+      - generic [ref=f9e68]:
+        - generic [ref=f9e69]: hello-ara-debug-002
+        - generic [ref=f9e72]:
+          - button "Check Stack" [ref=f9e73] [cursor=pointer]
+          - link "" [ref=f9e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f9e77]:
+        - list [ref=f9e78] [cursor=pointer]:
+          - listitem [ref=f9e79]:
+            - link "Topology" [ref=f9e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f9e81]:
+            - link "Overview" [ref=f9e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f9e83]:
+            - link "Resources" [ref=f9e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f9e85]:
+            - link "Events" [ref=f9e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f9e87]:
+            - link "Template" [ref=f9e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f9e94]:
+          - heading "hello-ara-debug-002" [level=3] [ref=f9e95]
+          - paragraph [ref=f9e96]: Create Complete

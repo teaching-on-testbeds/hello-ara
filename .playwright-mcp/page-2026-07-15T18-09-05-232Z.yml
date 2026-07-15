@@ -1,0 +1,151 @@
+- generic [active] [ref=f30e1]:
+  - navigation [ref=f30e2]:
+    - generic [ref=f30e3]:
+      - link [ref=f30e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f30e6]
+      - generic [ref=f30e7]:
+        - list [ref=f30e8] [cursor=pointer]:
+          - listitem [ref=f30e9]:
+            - button " New York University  nyunetworks " [ref=f30e10]:
+              - generic [ref=f30e11]: 
+              - generic [ref=f30e12]:
+                - text: New York University
+                - generic [ref=f30e13]: 
+                - text: nyunetworks
+              - generic [ref=f30e14]: 
+            - text:  
+        - list [ref=f30e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f30e16]:
+            - button " ffund@nyu.edu " [ref=f30e17]:
+              - generic [ref=f30e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f30e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f30e20]:
+    - navigation [ref=f30e22]:
+      - list [ref=f30e23] [cursor=pointer]:
+        - listitem [ref=f30e24]:
+          - generic [ref=f30e25]:
+            - text: Project
+            - generic [ref=f30e26]: 
+          - list [ref=f30e27]:
+            - link "Jupyter Notebook" [ref=f30e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f30e30]:
+              - generic [ref=f30e31]:
+                - text: Summary
+                - generic [ref=f30e32]: 
+            - listitem [ref=f30e33]:
+              - generic [ref=f30e34]:
+                - text: Container
+                - generic [ref=f30e35]: 
+            - listitem [ref=f30e36]:
+              - generic [ref=f30e37]:
+                - text: Network
+                - generic [ref=f30e38]: 
+            - listitem [ref=f30e39]:
+              - generic [ref=f30e40]:
+                - text: Orchestration
+                - generic [ref=f30e41]: 
+              - link "Stacks" [ref=f30e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f30e44]:
+              - generic [ref=f30e45]:
+                - text: Object Store
+                - generic [ref=f30e46]: 
+            - listitem [ref=f30e47]:
+              - generic [ref=f30e48]:
+                - text: Reservations
+                - generic [ref=f30e49]: 
+        - listitem [ref=f30e50]:
+          - generic [ref=f30e51]:
+            - text: Identity
+            - generic [ref=f30e52]: 
+        - listitem [ref=f30e53]:
+          - generic [ref=f30e54]:
+            - text: Data
+            - generic [ref=f30e55]: 
+    - generic [ref=f30e59]:
+      - list [ref=f30e61]:
+        - listitem [ref=f30e62]: Project
+        - listitem [ref=f30e63]: / Orchestration
+        - listitem [ref=f30e64]:
+          - text: /
+          - link "Stacks" [ref=f30e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f30e66]: / hello-ara-running-002
+      - generic [ref=f30e68]:
+        - generic [ref=f30e69]: hello-ara-running-002
+        - generic [ref=f30e72]:
+          - button "Check Stack" [ref=f30e73] [cursor=pointer]
+          - link "" [ref=f30e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f30e77]:
+        - list [ref=f30e78] [cursor=pointer]:
+          - listitem [ref=f30e79]:
+            - link "Topology" [ref=f30e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f30e81]:
+            - link "Overview" [expanded] [ref=f30e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f30e83]:
+            - link "Resources" [ref=f30e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f30e85]:
+            - link "Events" [ref=f30e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f30e87]:
+            - link "Template" [ref=f30e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f30e91]:
+          - generic [ref=f30e92]:
+            - term [ref=f30e93]: Name
+            - definition [ref=f30e94]: hello-ara-running-002
+            - term [ref=f30e95]: ID
+            - definition [ref=f30e96]: b32b7780-93da-4094-9ba5-be22e5427c37
+            - term [ref=f30e97]: Description
+            - definition [ref=f30e98]: Reserve one ARA sandbox host and launch a UHD container with SSH access.
+          - heading "Status" [level=4] [ref=f30e99]
+          - separator [ref=f30e100]
+          - generic [ref=f30e101]:
+            - term [ref=f30e102]: Created
+            - definition [ref=f30e103]: 7 minutes
+            - term [ref=f30e104]: Last Updated
+            - definition [ref=f30e105]: Never
+            - term [ref=f30e106]: Status
+            - definition [ref=f30e107]: "Create_Complete: Stack CREATE completed successfully"
+          - heading "Outputs" [level=4] [ref=f30e108]
+          - separator [ref=f30e109]
+          - generic [ref=f30e110]:
+            - term [ref=f30e111]: container_addresses
+            - definition [ref=f30e112]: Network addresses assigned to the ARA sandbox container.
+            - definition [ref=f30e113]:
+              - generic [ref=f30e114]: "{ \"8475928f-e65a-4e72-9b15-7de43a5b8853\": [ { \"addr\": \"10.0.4.122\", \"version\": 4, \"port\": \"54ab456a-40c5-4aab-a561-df2ec9a516da\", \"subnet_id\": \"06921066-71f4-4bb6-8de2-2a779ab73012\", \"preserve_on_delete\": false } ], \"ARA_Shared_Net\": [ { \"addr\": \"10.0.4.122\", \"version\": 4, \"port\": \"54ab456a-40c5-4aab-a561-df2ec9a516da\", \"subnet_id\": \"06921066-71f4-4bb6-8de2-2a779ab73012\", \"preserve_on_delete\": false } ] }"
+            - term [ref=f30e115]: container_name
+            - definition [ref=f30e116]: Name of the launched ARA sandbox container.
+            - definition [ref=f30e117]:
+              - generic [ref=f30e118]: hello-ara-sandbox-002
+          - heading "Stack Parameters" [level=4] [ref=f30e119]
+          - separator [ref=f30e120]
+          - generic [ref=f30e121]:
+            - term [ref=f30e122]: OS::stack_id
+            - definition [ref=f30e123]: b32b7780-93da-4094-9ba5-be22e5427c37
+            - term [ref=f30e124]: OS::project_id
+            - definition [ref=f30e125]: e927989ff5c04ea599a4e247f5b146ba
+            - term [ref=f30e126]: OS::stack_name
+            - definition [ref=f30e127]: hello-ara-running-002
+            - term [ref=f30e128]: sandbox_host
+            - definition [ref=f30e129]: "002"
+            - term [ref=f30e130]: ssh_public_key
+            - definition [ref=f30e131]: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCe/AJCOFjZjUtutpH20lLvbPANsPAqGQXHkEAKIc+EW2zdzPnwcx2wKdVWvky7pLn1Kt9FjbpeiQahpy54T4f3FNazyYzH574BhTCaTMWJA8akbn/iLhSPVRa3KDMteoKQsPSPo784PuEjp3J5klnkv9IJ8rBM3ZirGSaIGGpz6Y/zXBSxLto7CNVlE8gkbubY99mBR38MVQSoJgPov1bWyoy8phnB3lQEbUgRh8aO1+HDriqXqn4rs395rlc5vbKBmFx+SB24IwCWeUSCyz2MudZbWuptDCp+oqCVnk2i6JqgEuv+CrpQWTxbTnK/U5MWZVKklojiK6Waxb8kzPUWcj4jEQFUtarz5tvn815Or0t86tAu+TL0D7A7C48Ju96XwYK59ZTtY94HXfDw/5AsN76gNtuiRNWIvB2VSuiy4eKeCY3JtDjEN6EFjWJ7BoLSDDWGpeUexlQJpoNLuBFysblFMKKDdD8CetnwTgYmmx/keJ4usLfR7aDVZL9FnK0= ffund@ffund-thinkpad
+          - heading "Launch Parameters" [level=4] [ref=f30e132]
+          - separator [ref=f30e133]
+          - generic [ref=f30e134]:
+            - term [ref=f30e135]: Timeout
+            - definition [ref=f30e136]: None Minutes
+            - term [ref=f30e137]: Rollback
+            - definition [ref=f30e138]: Disabled

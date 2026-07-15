@@ -1,0 +1,104 @@
+- generic [ref=f12e1]:
+  - navigation [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link [ref=f12e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f12e6]
+      - generic [ref=f12e7]:
+        - list [ref=f12e8] [cursor=pointer]:
+          - listitem [ref=f12e9]:
+            - button " New York University  nyunetworks " [ref=f12e10]:
+              - generic [ref=f12e11]: 
+              - generic [ref=f12e12]:
+                - text: New York University
+                - generic [ref=f12e13]: 
+                - text: nyunetworks
+              - generic [ref=f12e14]: 
+            - text:  
+        - list [ref=f12e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f12e16]:
+            - button " ffund@nyu.edu " [ref=f12e17]:
+              - generic [ref=f12e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f12e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f12e20]:
+    - navigation [ref=f12e22]:
+      - list [ref=f12e23] [cursor=pointer]:
+        - listitem [ref=f12e24]:
+          - generic [ref=f12e25]:
+            - text: Project
+            - generic [ref=f12e26]: 
+          - list [ref=f12e27]:
+            - link "Jupyter Notebook" [ref=f12e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f12e30]:
+              - generic [ref=f12e31]:
+                - text: Summary
+                - generic [ref=f12e32]: 
+            - listitem [ref=f12e33]:
+              - generic [ref=f12e34]:
+                - text: Container
+                - generic [ref=f12e35]: 
+            - listitem [ref=f12e36]:
+              - generic [ref=f12e37]:
+                - text: Network
+                - generic [ref=f12e38]: 
+            - listitem [ref=f12e39]:
+              - generic [ref=f12e40]:
+                - text: Orchestration
+                - generic [ref=f12e41]: 
+              - link "Stacks" [ref=f12e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f12e44]:
+              - generic [ref=f12e45]:
+                - text: Object Store
+                - generic [ref=f12e46]: 
+            - listitem [ref=f12e47]:
+              - generic [ref=f12e48]:
+                - text: Reservations
+                - generic [ref=f12e49]: 
+        - listitem [ref=f12e50]:
+          - generic [ref=f12e51]:
+            - text: Identity
+            - generic [ref=f12e52]: 
+        - listitem [ref=f12e53]:
+          - generic [ref=f12e54]:
+            - text: Data
+            - generic [ref=f12e55]: 
+    - generic [ref=f12e59]:
+      - list [ref=f12e61]:
+        - listitem [ref=f12e62]: Project
+        - listitem [ref=f12e63]: / Orchestration
+        - listitem [ref=f12e64]:
+          - text: /
+          - link "Stacks" [ref=f12e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f12e66]: / hello-ara-param-002
+      - generic [ref=f12e68]:
+        - generic [ref=f12e69]: hello-ara-param-002
+        - generic [ref=f12e72]:
+          - button "Check Stack" [ref=f12e73] [cursor=pointer]
+          - link "" [ref=f12e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f12e77]:
+        - list [ref=f12e78] [cursor=pointer]:
+          - listitem [ref=f12e79]:
+            - link "Topology" [ref=f12e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f12e81]:
+            - link "Overview" [ref=f12e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f12e83]:
+            - link "Resources" [ref=f12e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f12e85]:
+            - link "Events" [ref=f12e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f12e87]:
+            - link "Template" [expanded] [active] [ref=f12e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f12e89]: "description: Reserve one ARA sandbox host and launch a UHD container with SSH access. heat_template_version: '2015-04-30' outputs: container_name: description: Name of the launched ARA sandbox container. value: get_attr: - container - name parameters: end_time: constraints: - allowed_pattern: ^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$ description: Use the format YYYY-MM-DD HH:MM description: Lease end time in UTC, formatted as YYYY-MM-DD HH:MM label: Lease End Time type: string sandbox_host: constraints: - allowed_pattern: ^\\d{3}$ description: Enter a three-digit host number, e.g. 001 description: Three-digit sandbox host number, e.g. 001 label: Sandbox Host Number type: string ssh_public_key: description: Contents of the SSH public key to authorize in the container label: SSH Public Key type: string start_time: constraints: - allowed_pattern: ^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}$ description: Use the format YYYY-MM-DD HH:MM description: Lease start time in UTC, formatted as YYYY-MM-DD HH:MM label: Lease Start Time type: string resources: container: depends_on: - lease properties: command: \"/bin/bash -lc '\\n set -eux;\\n\\n export DEBIAN_FRONTEND=noninteractive;\\n\\ \\ apt-get -o Acquire::Retries=5 update;\\n apt-get -y -o Acquire::Retries=5\\ \\ install openssh-server;\\n\\n mkdir -p /run/sshd /root/.ssh;\\n chmod 700\\ \\ /root/.ssh;\\n printf \\\"%s\\\\n\\\" \\\"$SSH_PUBLIC_KEY\\\" > /root/.ssh/authorized_keys;\\n\\ \\ chmod 600 /root/.ssh/authorized_keys;\\n echo \\\"PermitRootLogin yes\\\" >>\\ \\ /etc/ssh/sshd_config;\\n service ssh restart;\\n\\n python3 /lib/uhd/utils/uhd_images_downloader.py\\ \\ --types b2xx;\\n tail -f /dev/null;\\n'\\n\" cpu: 4.0 environment: SSH_PUBLIC_KEY: get_param: ssh_public_key hints: host_name: str_replace: params: HOST: get_param: sandbox_host template: Sandbox-Host-HOST hostname: str_replace: params: HOST: get_param: sandbox_host template: hello-ara-sandbox-HOST image: arawirelesshub/uhd:4.7.0.0 interactive: true memory: '8192' name: str_replace: params: HOST: get_param: sandbox_host template: hello-ara-sandbox-HOST networks: - network: ARA_Shared_Net tty: true type: OS::Zun::Container lease: properties: end_date: get_param: end_time name: str_replace: params: HOST: get_param: sandbox_host template: hello-ara-sandbox-HOST reservations: - max: 1 min: 1 resource_properties: '[\"and\", [\"==\", \"$Site\", \"Sandbox\"], [\"==\", \"$Resource_Type\", \"AraRAN\"], [\"==\", \"$Device_Type\", \"Host\"], [\"==\", \"$Device_ID\", \"{''str_replace'': {''template'': ''HOST'', ''params'': {''HOST'': {''get_param'': ''sandbox_host''}}}}\"]]' resource_type: physical:host start_date: get_param: start_time type: OS::Blazar::Lease"

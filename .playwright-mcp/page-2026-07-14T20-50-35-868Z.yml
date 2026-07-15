@@ -1,0 +1,83 @@
+- generic [active] [ref=f13e1]:
+  - navigation [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - link [ref=f13e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f13e6]
+      - generic [ref=f13e7]:
+        - list [ref=f13e8] [cursor=pointer]:
+          - listitem [ref=f13e9]:
+            - button " New York University  nyunetworks " [ref=f13e10]:
+              - generic [ref=f13e11]: 
+              - generic [ref=f13e12]:
+                - text: New York University
+                - generic [ref=f13e13]: 
+                - text: nyunetworks
+              - generic [ref=f13e14]: 
+            - text:  
+        - list [ref=f13e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f13e16]:
+            - button " ffund@nyu.edu " [ref=f13e17]:
+              - generic [ref=f13e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f13e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f13e20]:
+    - navigation [ref=f13e22]:
+      - list [ref=f13e23] [cursor=pointer]:
+        - listitem [ref=f13e24]:
+          - generic [ref=f13e25]:
+            - text: Project
+            - generic [ref=f13e26]: 
+          - text:      
+        - listitem [ref=f13e27]:
+          - generic [ref=f13e28]:
+            - text: Identity
+            - generic [ref=f13e29]: 
+        - listitem [ref=f13e30]:
+          - generic [ref=f13e31]:
+            - text: Data
+            - generic [ref=f13e32]: 
+        - listitem [ref=f13e33]:
+          - generic [ref=f13e34]:
+            - text: Settings
+            - generic [ref=f13e35]: 
+          - list [ref=f13e36]:
+            - generic [ref=f13e37]:
+              - link "User Settings" [ref=f13e38]:
+                - /url: /settings/
+              - link "Change Password" [ref=f13e39]:
+                - /url: /settings/password/
+    - generic [ref=f13e43]:
+      - list [ref=f13e45]:
+        - listitem [ref=f13e46]: Settings
+        - listitem [ref=f13e47]:
+          - text: /
+          - link "User Settings" [ref=f13e48] [cursor=pointer]:
+            - /url: /settings/
+        - listitem [ref=f13e49]: /
+      - generic [ref=f13e50]:
+        - heading [level=1]
+      - generic [ref=f13e53]:
+        - heading "Uplaod public key" [level=3] [ref=f13e55]
+        - generic [ref=f13e56]:
+          - generic [ref=f13e58]:
+            - group [ref=f13e60]:
+              - generic [ref=f13e61]:
+                - generic [ref=f13e62]: Public Key File
+                - generic [ref=f13e63]: 
+                - generic "A public key file to upload" [ref=f13e64]: 
+                - button "Public Key File" [ref=f13e67]
+            - generic [ref=f13e68]:
+              - heading "Description:" [level=3] [ref=f13e69]
+              - paragraph [ref=f13e70]: Upload your public key to access ARA jumpbox.
+              - paragraph [ref=f13e71]: "Jumpbox Username: ffund_nyu"
+              - paragraph [ref=f13e72]: You can use the following command from your computer to access jumpbox.
+              - paragraph [ref=f13e73]: ssh -i your_private_key_filename ffund_nyu@jbox.arawireless.org
+          - generic [ref=f13e74]:
+            - link "Cancel" [ref=f13e75] [cursor=pointer]:
+              - /url: /project/
+            - button "Upload Key" [ref=f13e76] [cursor=pointer]

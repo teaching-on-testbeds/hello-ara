@@ -1,0 +1,15 @@
+Same CSV:
+
+username
+aydini@farmingdale.edu
+
+
+You will create a project using Globus Auth > Less common login options > Google - the domain will be Farmingdale State College
+
+Then, you'll upload a User List and your students should be able to then log in also using Globus Auth > Less Common Login Options
+
+As a workaround, it is also possible for the instructor to set a password for a student and then they will be able to log in using Keystone Credentials with email address and password.
+
+Instructor creates an account: https://forms.gle/frpLBmtTMvNptrEEA
+
+A jumpbox account is created automatically.

@@ -1,0 +1,176 @@
+- generic [active] [ref=f25e1]:
+  - navigation [ref=f25e2]:
+    - generic [ref=f25e3]:
+      - link [ref=f25e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f25e6]
+      - generic [ref=f25e7]:
+        - list [ref=f25e8] [cursor=pointer]:
+          - listitem [ref=f25e9]:
+            - button " New York University  nyunetworks " [ref=f25e10]:
+              - generic [ref=f25e11]: 
+              - generic [ref=f25e12]:
+                - text: New York University
+                - generic [ref=f25e13]: 
+                - text: nyunetworks
+              - generic [ref=f25e14]: 
+            - text:  
+        - list [ref=f25e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f25e16]:
+            - button " ffund@nyu.edu " [ref=f25e17]:
+              - generic [ref=f25e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f25e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f25e20]:
+    - navigation [ref=f25e22]:
+      - list [ref=f25e23] [cursor=pointer]:
+        - listitem [ref=f25e24]:
+          - generic [ref=f25e25]:
+            - text: Project
+            - generic [ref=f25e26]: 
+          - list [ref=f25e27]:
+            - link "Jupyter Notebook" [ref=f25e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f25e30]:
+              - generic [ref=f25e31]:
+                - text: Summary
+                - generic [ref=f25e32]: 
+            - listitem [ref=f25e33]:
+              - generic [ref=f25e34]:
+                - text: Container
+                - generic [ref=f25e35]: 
+            - listitem [ref=f25e36]:
+              - generic [ref=f25e37]:
+                - text: Network
+                - generic [ref=f25e38]: 
+              - generic [ref=f25e39]:
+                - link "Network Topology" [ref=f25e40]:
+                  - /url: /project/network_topology/
+                - link "Networks" [ref=f25e41]:
+                  - /url: /project/networks/
+                - link "Routers" [ref=f25e42]:
+                  - /url: /project/routers/
+                - link "Security Groups" [ref=f25e43]:
+                  - /url: /project/security_groups/
+                - link "Floating IPs" [ref=f25e44]:
+                  - /url: /project/floating_ips/
+            - listitem [ref=f25e45]:
+              - generic [ref=f25e46]:
+                - text: Orchestration
+                - generic [ref=f25e47]: 
+            - listitem [ref=f25e48]:
+              - generic [ref=f25e49]:
+                - text: Object Store
+                - generic [ref=f25e50]: 
+            - listitem [ref=f25e51]:
+              - generic [ref=f25e52]:
+                - text: Reservations
+                - generic [ref=f25e53]: 
+        - listitem [ref=f25e54]:
+          - generic [ref=f25e55]:
+            - text: Identity
+            - generic [ref=f25e56]: 
+        - listitem [ref=f25e57]:
+          - generic [ref=f25e58]:
+            - text: Data
+            - generic [ref=f25e59]: 
+    - generic [ref=f25e63]:
+      - list [ref=f25e65]:
+        - listitem [ref=f25e66]: Project
+        - listitem [ref=f25e67]: / Network
+        - listitem [ref=f25e68]: / Networks
+      - heading "Networks" [level=1] [ref=f25e70]
+      - table [ref=f25e73]:
+        - caption [ref=f25e74]:
+          - generic [ref=f25e75]:
+            - generic [ref=f25e76]:
+              - button "Name = " [ref=f25e78] [cursor=pointer]:
+                - text: Name =
+                - generic [ref=f25e79]: 
+              - textbox [ref=f25e80]
+              - button "Filter" [ref=f25e81] [cursor=pointer]
+            - link " Create Network" [ref=f25e82] [cursor=pointer]:
+              - /url: /project/networks/create
+              - generic [ref=f25e83]: 
+              - text: Create Network
+            - button " Delete Networks" [ref=f25e84]:
+              - generic [ref=f25e85]: 
+              - text: Delete Networks
+        - rowgroup [ref=f25e86]:
+          - row [ref=f25e87]:
+            - cell "Displaying 3 items" [ref=f25e88]
+          - row [ref=f25e89]:
+            - columnheader "" [ref=f25e90]
+            - columnheader [ref=f25e94] [cursor=pointer]
+            - columnheader [ref=f25e96] [cursor=pointer]
+            - columnheader [ref=f25e98] [cursor=pointer]
+            - columnheader [ref=f25e100] [cursor=pointer]
+            - columnheader [ref=f25e102] [cursor=pointer]
+            - columnheader [ref=f25e104] [cursor=pointer]
+            - columnheader [ref=f25e106] [cursor=pointer]
+            - columnheader [ref=f25e108]
+        - rowgroup [ref=f25e110]:
+          - row [ref=f25e111]:
+            - cell "" [ref=f25e112]
+            - cell [ref=f25e115]:
+              - link "ARA_Shared_Net" [ref=f25e116] [cursor=pointer]:
+                - /url: /project/networks/8475928f-e65a-4e72-9b15-7de43a5b8853/detail
+            - cell [ref=f25e117]:
+              - list [ref=f25e118]:
+                - listitem [ref=f25e119]: ARA_Shared_Subnet 10.0.4.0/24
+            - cell "Yes" [ref=f25e120]
+            - cell "No" [ref=f25e121]
+            - cell "Active" [ref=f25e122]
+            - cell "UP" [ref=f25e123]
+            - cell "nova" [ref=f25e124]
+            - cell [ref=f25e125]:
+              - generic [ref=f25e126]:
+                - link "Edit Network" [ref=f25e127] [cursor=pointer]:
+                  - /url: /project/networks/8475928f-e65a-4e72-9b15-7de43a5b8853/update
+                - link "" [ref=f25e128] [cursor=pointer]:
+                  - /url: "#"
+          - row [ref=f25e130]:
+            - cell "" [ref=f25e131]
+            - cell [ref=f25e134]:
+              - link "ICICLE_Shared_Net" [ref=f25e135] [cursor=pointer]:
+                - /url: /project/networks/a763374a-6d17-4e1d-a079-d102cecf1d8d/detail
+            - cell [ref=f25e136]:
+              - list [ref=f25e137]:
+                - listitem [ref=f25e138]: ICICLE_Shared_Subnet 10.0.5.0/24
+            - cell "Yes" [ref=f25e139]
+            - cell "No" [ref=f25e140]
+            - cell "Active" [ref=f25e141]
+            - cell "UP" [ref=f25e142]
+            - cell "nova" [ref=f25e143]
+            - cell [ref=f25e144]:
+              - generic [ref=f25e145]:
+                - link "Edit Network" [ref=f25e146] [cursor=pointer]:
+                  - /url: /project/networks/a763374a-6d17-4e1d-a079-d102cecf1d8d/update
+                - link "" [ref=f25e147] [cursor=pointer]:
+                  - /url: "#"
+          - row [ref=f25e149]:
+            - cell "" [ref=f25e150]
+            - cell [ref=f25e153]:
+              - link "public1" [ref=f25e154] [cursor=pointer]:
+                - /url: /project/networks/fd4bcd26-3982-49b4-a39c-93b9f30da74a/detail
+            - cell [ref=f25e155]:
+              - list [ref=f25e156]:
+                - listitem [ref=f25e157]: public1-subnet 10.189.8.0/22
+            - cell "Yes" [ref=f25e158]
+            - cell "Yes" [ref=f25e159]
+            - cell "Active" [ref=f25e160]
+            - cell "UP" [ref=f25e161]
+            - cell "nova" [ref=f25e162]
+            - cell [ref=f25e163]:
+              - generic [ref=f25e164]:
+                - link "Edit Network" [ref=f25e165] [cursor=pointer]:
+                  - /url: /project/networks/fd4bcd26-3982-49b4-a39c-93b9f30da74a/update
+                - link "" [ref=f25e166] [cursor=pointer]:
+                  - /url: "#"
+        - rowgroup [ref=f25e168]:
+          - row [ref=f25e169]:
+            - cell "Displaying 3 items" [ref=f25e170]

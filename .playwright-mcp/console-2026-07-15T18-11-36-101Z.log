@@ -1,0 +1,4 @@
+[     563ms] [LOG] JQMIGRATE: Logging is active @ https://portal.arawireless.org/static/dashboard/js/output.d99d3c24731c.js:697
+[   26036ms] [LOG] JQMIGRATE: Logging is active @ https://portal.arawireless.org/static/dashboard/js/output.d99d3c24731c.js:697
+[   78134ms] [LOG] JQMIGRATE: Logging is active @ https://portal.arawireless.org/static/dashboard/js/output.d99d3c24731c.js:697
+[   93762ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ https://portal.arawireless.org/project/stacks/?action=row_update&table=stacks&obj_id=b32b7780-93da-4094-9ba5-be22e5427c37:0

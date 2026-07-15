@@ -1,0 +1,173 @@
+- generic [ref=f26e1]:
+  - navigation [ref=f26e2]:
+    - generic [ref=f26e3]:
+      - link [ref=f26e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f26e6]
+      - generic [ref=f26e7]:
+        - list [ref=f26e8] [cursor=pointer]:
+          - listitem [ref=f26e9]:
+            - button " New York University  nyunetworks " [ref=f26e10]:
+              - generic [ref=f26e11]: 
+              - generic [ref=f26e12]:
+                - text: New York University
+                - generic [ref=f26e13]: 
+                - text: nyunetworks
+              - generic [ref=f26e14]: 
+            - text:  
+        - list [ref=f26e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f26e16]:
+            - button " ffund@nyu.edu " [ref=f26e17]:
+              - generic [ref=f26e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f26e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f26e20]:
+    - navigation [ref=f26e22]:
+      - list [ref=f26e23] [cursor=pointer]:
+        - listitem [ref=f26e24]:
+          - generic [ref=f26e25]:
+            - text: Project
+            - generic [ref=f26e26]: 
+          - list [ref=f26e27]:
+            - link "Jupyter Notebook" [ref=f26e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f26e30]:
+              - generic [ref=f26e31]:
+                - text: Summary
+                - generic [ref=f26e32]: 
+            - listitem [ref=f26e33]:
+              - generic [ref=f26e34]:
+                - text: Container
+                - generic [ref=f26e35]: 
+            - listitem [ref=f26e36]:
+              - generic [ref=f26e37]:
+                - text: Network
+                - generic [ref=f26e38]: 
+            - listitem [ref=f26e39]:
+              - generic [ref=f26e40]:
+                - text: Orchestration
+                - generic [ref=f26e41]: 
+              - link "Stacks" [ref=f26e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f26e44]:
+              - generic [ref=f26e45]:
+                - text: Object Store
+                - generic [ref=f26e46]: 
+            - listitem [ref=f26e47]:
+              - generic [ref=f26e48]:
+                - text: Reservations
+                - generic [ref=f26e49]: 
+        - listitem [ref=f26e50]:
+          - generic [ref=f26e51]:
+            - text: Identity
+            - generic [ref=f26e52]: 
+        - listitem [ref=f26e53]:
+          - generic [ref=f26e54]:
+            - text: Data
+            - generic [ref=f26e55]: 
+    - generic [ref=f26e59]:
+      - list [ref=f26e61]:
+        - listitem [ref=f26e62]: Project
+        - listitem [ref=f26e63]: / Orchestration
+        - listitem [ref=f26e64]: / Stacks
+      - heading "Stacks" [level=1] [ref=f26e66]
+      - table [ref=f26e69]:
+        - caption [ref=f26e70]:
+          - generic [ref=f26e71]:
+            - generic [ref=f26e72]:
+              - button "Stack Name = " [ref=f26e74] [cursor=pointer]:
+                - text: Stack Name =
+                - generic [ref=f26e75]: 
+              - textbox [ref=f26e76]
+              - button "Filter" [ref=f26e77] [cursor=pointer]
+            - link " Launch Stack" [ref=f26e78] [cursor=pointer]:
+              - /url: /project/stacks/select_template
+              - generic [ref=f26e79]: 
+              - text: Launch Stack
+            - link " Preview Stack" [ref=f26e80] [cursor=pointer]:
+              - /url: /project/stacks/preview_template
+              - generic [ref=f26e81]: 
+              - text: Preview Stack
+            - button " Delete Stacks" [ref=f26e82]:
+              - generic [ref=f26e83]: 
+              - text: Delete Stacks
+            - generic [ref=f26e84]:
+              - link "More Actions ":
+                - /url: "#"
+                - text: More Actions
+                - generic: 
+              - text:   
+        - rowgroup [ref=f26e85]:
+          - row [ref=f26e86]:
+            - cell "Displaying 2 items" [ref=f26e87]
+          - row [ref=f26e88]:
+            - columnheader "" [ref=f26e89]
+            - columnheader [ref=f26e93] [cursor=pointer]
+            - columnheader [ref=f26e95] [cursor=pointer]
+            - columnheader [ref=f26e97] [cursor=pointer]
+            - columnheader [ref=f26e99] [cursor=pointer]
+            - columnheader [ref=f26e101]
+        - rowgroup [ref=f26e103]:
+          - row [ref=f26e104]:
+            - cell "" [ref=f26e105]
+            - cell [ref=f26e108]:
+              - link "hello-ara-running-002" [ref=f26e109] [cursor=pointer]:
+                - /url: /project/stacks/stack/b32b7780-93da-4094-9ba5-be22e5427c37/
+            - cell "3 minutes" [ref=f26e110]
+            - cell "Never" [ref=f26e111]
+            - cell "Create Complete" [ref=f26e112]
+            - cell [ref=f26e113]:
+              - generic [ref=f26e114]:
+                - button "Check Stack" [ref=f26e115] [cursor=pointer]
+                - link "" [ref=f26e116] [cursor=pointer]:
+                  - /url: "#"
+          - row [ref=f26e118]:
+            - cell "" [ref=f26e119]
+            - cell [ref=f26e122]:
+              - link "hello-ara" [ref=f26e123] [cursor=pointer]:
+                - /url: /project/stacks/stack/0284055b-1faf-49fe-bc4b-eebff42d7669/
+            - cell "17 minutes" [ref=f26e124]
+            - cell "Never" [ref=f26e125]
+            - cell "Create Complete" [ref=f26e126]
+            - cell [ref=f26e127]:
+              - generic [ref=f26e128]:
+                - button "Check Stack" [ref=f26e129] [cursor=pointer]
+                - link "" [ref=f26e130] [cursor=pointer]:
+                  - /url: "#"
+        - rowgroup [ref=f26e132]:
+          - row [ref=f26e133]:
+            - cell "Displaying 2 items" [ref=f26e134]
+  - generic [ref=f26e170]:
+    - generic [ref=f26e171]:
+      - link "" [ref=f26e172] [cursor=pointer]:
+        - /url: "#"
+      - heading "Launch Stack" [level=3] [ref=f26e174]
+    - generic [ref=f26e175]:
+      - generic [ref=f26e177]:
+        - group [ref=f26e179]:
+          - generic [ref=f26e180]:
+            - generic [ref=f26e181]: Stack Name
+            - generic [ref=f26e182]: 
+            - generic "Name of the stack to create." [ref=f26e183]: 
+            - textbox "Stack Name" [active] [ref=f26e186]
+          - generic [ref=f26e187]:
+            - generic [ref=f26e188]: Sandbox Host Number
+            - generic [ref=f26e189]: 
+            - generic "Three-digit sandbox host number, e.g. 001" [ref=f26e190]: 
+            - textbox "Sandbox Host Number" [ref=f26e193]
+          - generic [ref=f26e194]:
+            - generic [ref=f26e195]: SSH Public Key
+            - generic [ref=f26e196]: 
+            - generic "Contents of the SSH public key to authorize in the container" [ref=f26e197]: 
+            - textbox "SSH Public Key" [ref=f26e200]
+        - generic [ref=f26e201]:
+          - heading "Description:" [level=3] [ref=f26e202]
+          - paragraph [ref=f26e203]: Create a new stack with the provided name.
+      - generic [ref=f26e204]:
+        - link "Cancel" [ref=f26e205] [cursor=pointer]:
+          - /url: /project/stacks/
+        - button "Launch" [ref=f26e206] [cursor=pointer]

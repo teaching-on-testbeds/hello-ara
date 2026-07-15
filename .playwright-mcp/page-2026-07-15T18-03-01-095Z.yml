@@ -1,0 +1,106 @@
+- generic [active] [ref=f22e1]:
+  - navigation [ref=f22e2]:
+    - generic [ref=f22e3]:
+      - link [ref=f22e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f22e6]
+      - generic [ref=f22e7]:
+        - list [ref=f22e8] [cursor=pointer]:
+          - listitem [ref=f22e9]:
+            - button " New York University  nyunetworks " [ref=f22e10]:
+              - generic [ref=f22e11]: 
+              - generic [ref=f22e12]:
+                - text: New York University
+                - generic [ref=f22e13]: 
+                - text: nyunetworks
+              - generic [ref=f22e14]: 
+            - text:  
+        - list [ref=f22e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f22e16]:
+            - button " ffund@nyu.edu " [ref=f22e17]:
+              - generic [ref=f22e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f22e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f22e20]:
+    - navigation [ref=f22e22]:
+      - list [ref=f22e23] [cursor=pointer]:
+        - listitem [ref=f22e24]:
+          - generic [ref=f22e25]:
+            - text: Project
+            - generic [ref=f22e26]: 
+          - list [ref=f22e27]:
+            - link "Jupyter Notebook" [ref=f22e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f22e30]:
+              - generic [ref=f22e31]:
+                - text: Summary
+                - generic [ref=f22e32]: 
+            - listitem [ref=f22e33]:
+              - generic [ref=f22e34]:
+                - text: Container
+                - generic [ref=f22e35]: 
+            - listitem [ref=f22e36]:
+              - generic [ref=f22e37]:
+                - text: Network
+                - generic [ref=f22e38]: 
+            - listitem [ref=f22e39]:
+              - generic [ref=f22e40]:
+                - text: Orchestration
+                - generic [ref=f22e41]: 
+              - link "Stacks" [ref=f22e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f22e44]:
+              - generic [ref=f22e45]:
+                - text: Object Store
+                - generic [ref=f22e46]: 
+            - listitem [ref=f22e47]:
+              - generic [ref=f22e48]:
+                - text: Reservations
+                - generic [ref=f22e49]: 
+        - listitem [ref=f22e50]:
+          - generic [ref=f22e51]:
+            - text: Identity
+            - generic [ref=f22e52]: 
+        - listitem [ref=f22e53]:
+          - generic [ref=f22e54]:
+            - text: Data
+            - generic [ref=f22e55]: 
+    - generic [ref=f22e59]:
+      - list [ref=f22e61]:
+        - listitem [ref=f22e62]: Project
+        - listitem [ref=f22e63]: / Orchestration
+        - listitem [ref=f22e64]:
+          - text: /
+          - link "Stacks" [ref=f22e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f22e66]: / hello-ara-running-002
+      - generic [ref=f22e68]:
+        - generic [ref=f22e69]: hello-ara-running-002
+        - generic [ref=f22e72]:
+          - button "Check Stack" [ref=f22e73] [cursor=pointer]
+          - link "" [ref=f22e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f22e77]:
+        - list [ref=f22e78] [cursor=pointer]:
+          - listitem [ref=f22e79]:
+            - link "Topology" [ref=f22e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f22e81]:
+            - link "Overview" [ref=f22e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f22e83]:
+            - link "Resources" [ref=f22e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f22e85]:
+            - link "Events" [ref=f22e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f22e87]:
+            - link "Template" [ref=f22e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f22e94]:
+          - heading "hello-ara-running-002" [level=3] [ref=f22e95]
+          - paragraph [ref=f22e96]: Create Complete

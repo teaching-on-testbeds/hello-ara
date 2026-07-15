@@ -1,0 +1,103 @@
+heat_template_version: '2015-04-30'
+
+description: Reserve one ARA sandbox host and launch a UHD container with SSH access.
+
+parameters:
+  sandbox_host:
+    type: string
+    label: Sandbox Host Number
+    description: Three-digit sandbox host number, e.g. 001
+    constraints:
+      - allowed_pattern: '^\d{3}$'
+        description: Enter a three-digit host number, e.g. 001
+  ssh_public_key:
+    type: string
+    label: SSH Public Key
+    description: Contents of the SSH public key to authorize in the container
+
+resources:
+  lease:
+    type: OS::Blazar::Lease
+    properties:
+      start_date: ''
+      end_date: ''
+      name:
+        str_replace:
+          template: hello-ara-sandbox-HOST
+          params:
+            HOST: { get_param: sandbox_host }
+      reservations:
+        - resource_type: physical:host
+          min: 1
+          max: 1
+          resource_properties:
+            str_replace:
+              template: '["and", ["==", "$Site", "Sandbox"], ["==", "$Resource_Type", "AraRAN"], ["==", "$Device_Type", "Host"], ["==", "$Device_ID", "HOST"]]'
+              params:
+                HOST: { get_param: sandbox_host }
+
+  container:
+    type: OS::Zun::Container
+    depends_on:
+      - lease
+    properties:
+      name:
+        str_replace:
+          template: hello-ara-sandbox-HOST
+          params:
+            HOST: { get_param: sandbox_host }
+      hostname:
+        str_replace:
+          template: hello-ara-sandbox-HOST
+          params:
+            HOST: { get_param: sandbox_host }
+      image: arawirelesshub/uhd:4.7.0.0
+      hints:
+        host_name:
+          str_replace:
+            template: Sandbox-Host-HOST
+            params:
+              HOST: { get_param: sandbox_host }
+      cpu: 4.0
+      memory: '8192'
+      networks:
+        - network: ARA_Shared_Net
+      interactive: false
+      environment:
+        SSH_PUBLIC_KEY: { get_param: ssh_public_key }
+      command: |
+        /bin/bash -lc '
+          set -eux;
+
+          export DEBIAN_FRONTEND=noninteractive;
+          retry() {
+            for attempt in 1 2 3 4 5 6 7 8 9 10; do
+              "$@" && return 0;
+              sleep 30;
+            done;
+            return 1;
+          }
+
+          retry bash -ec "
+            apt-get -o Acquire::Retries=5 update;
+            apt-get -y -o Acquire::Retries=5 install openssh-server;
+          ";
+
+          mkdir -p /run/sshd /root/.ssh;
+          chmod 700 /root/.ssh;
+          printf "%s\n" "$SSH_PUBLIC_KEY" > /root/.ssh/authorized_keys;
+          chmod 600 /root/.ssh/authorized_keys;
+          echo "PermitRootLogin yes" >> /etc/ssh/sshd_config;
+          service ssh restart || /usr/sbin/sshd;
+
+          python3 /usr/local/lib/uhd/utils/uhd_images_downloader.py --types b2xx || true;
+          tail -f /dev/null;
+        '
+
+outputs:
+  container_name:
+    description: Name of the launched ARA sandbox container.
+    value: { get_attr: [container, name] }
+  container_addresses:
+    description: Network addresses assigned to the ARA sandbox container.
+    value: { get_attr: [container, addresses] }

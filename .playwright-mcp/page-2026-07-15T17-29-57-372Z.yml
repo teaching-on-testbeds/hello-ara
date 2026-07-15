@@ -1,0 +1,99 @@
+- generic [active] [ref=f5e1]:
+  - navigation [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link [ref=f5e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f5e6]
+      - generic [ref=f5e7]:
+        - list [ref=f5e8] [cursor=pointer]:
+          - listitem [ref=f5e9]:
+            - button " New York University  nyunetworks " [ref=f5e10]:
+              - generic [ref=f5e11]: 
+              - generic [ref=f5e12]:
+                - text: New York University
+                - generic [ref=f5e13]: 
+                - text: nyunetworks
+              - generic [ref=f5e14]: 
+            - text:  
+        - list [ref=f5e15] [cursor=pointer]:
+          - listitem
+          - listitem
+          - listitem [ref=f5e16]:
+            - button " ffund@nyu.edu " [ref=f5e17]:
+              - generic [ref=f5e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f5e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f5e20]:
+    - navigation [ref=f5e22]:
+      - list [ref=f5e23] [cursor=pointer]:
+        - listitem [ref=f5e24]:
+          - generic [ref=f5e25]:
+            - text: Project
+            - generic [ref=f5e26]: 
+          - list [ref=f5e27]:
+            - link "Jupyter Notebook" [ref=f5e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f5e30]:
+              - generic [ref=f5e31]:
+                - text: Summary
+                - generic [ref=f5e32]: 
+            - listitem [ref=f5e33]:
+              - generic [ref=f5e34]:
+                - text: Container
+                - generic [ref=f5e35]: 
+            - listitem [ref=f5e36]:
+              - generic [ref=f5e37]:
+                - text: Network
+                - generic [ref=f5e38]: 
+            - listitem [ref=f5e39]:
+              - generic [ref=f5e40]:
+                - text: Orchestration
+                - generic [ref=f5e41]: 
+            - listitem [ref=f5e42]:
+              - generic [ref=f5e43]:
+                - text: Object Store
+                - generic [ref=f5e44]: 
+            - listitem [ref=f5e45]:
+              - generic [ref=f5e46]:
+                - text: Reservations
+                - generic [ref=f5e47]: 
+              - link "Leases" [ref=f5e49]:
+                - /url: /project/leases/
+        - listitem [ref=f5e50]:
+          - generic [ref=f5e51]:
+            - text: Identity
+            - generic [ref=f5e52]: 
+        - listitem [ref=f5e53]:
+          - generic [ref=f5e54]:
+            - text: Data
+            - generic [ref=f5e55]: 
+    - generic [ref=f5e59]:
+      - list [ref=f5e61]:
+        - listitem [ref=f5e62]: Project
+        - listitem [ref=f5e63]: / Reservations
+        - listitem [ref=f5e64]: /
+      - heading "Leases" [level=1] [ref=f5e66]
+      - table [ref=f5e69]:
+        - caption [ref=f5e70]:
+          - generic [ref=f5e71]:
+            - link " Host Calendar" [ref=f5e72] [cursor=pointer]:
+              - /url: calendar/host/
+              - generic [ref=f5e73]: 
+              - text: Host Calendar
+            - link " create Lease" [ref=f5e74] [cursor=pointer]:
+              - /url: /project/leases/createLease/
+              - generic [ref=f5e75]: 
+              - text: create Lease
+        - rowgroup [ref=f5e76]:
+          - row [ref=f5e77]:
+            - columnheader "Lease name" [ref=f5e78]
+            - columnheader "Start date" [ref=f5e79]
+            - columnheader "End date" [ref=f5e80]
+            - columnheader "Status" [ref=f5e81]
+            - columnheader "Degraded" [ref=f5e82]
+            - columnheader "Actions" [ref=f5e83]
+        - rowgroup [ref=f5e84]:
+          - row [ref=f5e85]:
+            - cell "No items to display." [ref=f5e86]

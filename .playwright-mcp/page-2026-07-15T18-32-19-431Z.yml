@@ -1,0 +1,108 @@
+- generic [active] [ref=f44e1]:
+  - navigation [ref=f44e2]:
+    - generic [ref=f44e3]:
+      - link [ref=f44e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f44e6]
+      - generic [ref=f44e7]:
+        - list [ref=f44e8] [cursor=pointer]:
+          - listitem [ref=f44e9]:
+            - button " New York University  nyunetworks " [ref=f44e10]:
+              - generic [ref=f44e11]: 
+              - generic [ref=f44e12]:
+                - text: New York University
+                - generic [ref=f44e13]: 
+                - text: nyunetworks
+              - generic [ref=f44e14]: 
+            - text:  
+        - list [ref=f44e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f44e16]:
+            - button " ffund@nyu.edu " [ref=f44e17]:
+              - generic [ref=f44e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f44e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f44e20]:
+    - navigation [ref=f44e22]:
+      - list [ref=f44e23] [cursor=pointer]:
+        - listitem [ref=f44e24]:
+          - generic [ref=f44e25]:
+            - text: Project
+            - generic [ref=f44e26]: 
+          - list [ref=f44e27]:
+            - link "Jupyter Notebook" [ref=f44e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f44e30]:
+              - generic [ref=f44e31]:
+                - text: Summary
+                - generic [ref=f44e32]: 
+            - listitem [ref=f44e33]:
+              - generic [ref=f44e34]:
+                - text: Container
+                - generic [ref=f44e35]: 
+            - listitem [ref=f44e36]:
+              - generic [ref=f44e37]:
+                - text: Network
+                - generic [ref=f44e38]: 
+            - listitem [ref=f44e39]:
+              - generic [ref=f44e40]:
+                - text: Orchestration
+                - generic [ref=f44e41]: 
+              - link "Stacks" [ref=f44e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f44e44]:
+              - generic [ref=f44e45]:
+                - text: Object Store
+                - generic [ref=f44e46]: 
+            - listitem [ref=f44e47]:
+              - generic [ref=f44e48]:
+                - text: Reservations
+                - generic [ref=f44e49]: 
+        - listitem [ref=f44e50]:
+          - generic [ref=f44e51]:
+            - text: Identity
+            - generic [ref=f44e52]: 
+        - listitem [ref=f44e53]:
+          - generic [ref=f44e54]:
+            - text: Data
+            - generic [ref=f44e55]: 
+    - generic [ref=f44e59]:
+      - list [ref=f44e61]:
+        - listitem [ref=f44e62]: Project
+        - listitem [ref=f44e63]: / Orchestration
+        - listitem [ref=f44e64]:
+          - text: /
+          - link "Stacks" [ref=f44e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f44e66]: / hello-ara-test-ffund
+      - generic [ref=f44e68]:
+        - generic [ref=f44e69]: hello-ara-test-ffund
+        - generic [ref=f44e72]:
+          - button "Check Stack" [ref=f44e73] [cursor=pointer]
+          - link "" [ref=f44e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f44e77]:
+        - list [ref=f44e78] [cursor=pointer]:
+          - listitem [ref=f44e79]:
+            - link "Topology" [ref=f44e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f44e81]:
+            - link "Overview" [ref=f44e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f44e83]:
+            - link "Resources" [ref=f44e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f44e85]:
+            - link "Events" [ref=f44e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f44e87]:
+            - link "Template" [ref=f44e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f44e92]:
+          - generic [ref=f44e94]:
+            - heading "hello-ara-test-ffund" [level=3] [ref=f44e95]
+            - paragraph [ref=f44e96]: Create Failed
+          - paragraph [ref=f44e97]: "Resource Create Failed: Blazarclientexception: Resources.Lease: Error: Start Date Must Be Later Than Current Date"

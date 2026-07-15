@@ -1,0 +1,156 @@
+- generic [ref=f20e1]:
+  - navigation [ref=f20e2]:
+    - generic [ref=f20e3]:
+      - link [ref=f20e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f20e6]
+      - generic [ref=f20e7]:
+        - list [ref=f20e8] [cursor=pointer]:
+          - listitem [ref=f20e9]:
+            - button " New York University  nyunetworks " [ref=f20e10]:
+              - generic [ref=f20e11]: 
+              - generic [ref=f20e12]:
+                - text: New York University
+                - generic [ref=f20e13]: 
+                - text: nyunetworks
+              - generic [ref=f20e14]: 
+            - text:  
+        - list [ref=f20e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f20e16]:
+            - button " ffund@nyu.edu " [ref=f20e17]:
+              - generic [ref=f20e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f20e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f20e20]:
+    - navigation [ref=f20e22]:
+      - list [ref=f20e23] [cursor=pointer]:
+        - listitem [ref=f20e24]:
+          - generic [ref=f20e25]:
+            - text: Project
+            - generic [ref=f20e26]: 
+          - list [ref=f20e27]:
+            - link "Jupyter Notebook" [ref=f20e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f20e30]:
+              - generic [ref=f20e31]:
+                - text: Summary
+                - generic [ref=f20e32]: 
+            - listitem [ref=f20e33]:
+              - generic [ref=f20e34]:
+                - text: Container
+                - generic [ref=f20e35]: 
+            - listitem [ref=f20e36]:
+              - generic [ref=f20e37]:
+                - text: Network
+                - generic [ref=f20e38]: 
+            - listitem [ref=f20e39]:
+              - generic [ref=f20e40]:
+                - text: Orchestration
+                - generic [ref=f20e41]: 
+              - link "Stacks" [ref=f20e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f20e44]:
+              - generic [ref=f20e45]:
+                - text: Object Store
+                - generic [ref=f20e46]: 
+            - listitem [ref=f20e47]:
+              - generic [ref=f20e48]:
+                - text: Reservations
+                - generic [ref=f20e49]: 
+        - listitem [ref=f20e50]:
+          - generic [ref=f20e51]:
+            - text: Identity
+            - generic [ref=f20e52]: 
+        - listitem [ref=f20e53]:
+          - generic [ref=f20e54]:
+            - text: Data
+            - generic [ref=f20e55]: 
+    - generic [ref=f20e59]:
+      - list [ref=f20e61]:
+        - listitem [ref=f20e62]: Project
+        - listitem [ref=f20e63]: / Orchestration
+        - listitem [ref=f20e64]: / Stacks
+      - heading "Stacks" [level=1] [ref=f20e66]
+      - table [ref=f20e69]:
+        - caption [ref=f20e70]:
+          - generic [ref=f20e71]:
+            - generic [ref=f20e72]:
+              - button "Stack Name = " [ref=f20e74] [cursor=pointer]:
+                - text: Stack Name =
+                - generic [ref=f20e75]: 
+              - textbox [ref=f20e76]
+              - button "Filter" [ref=f20e77] [cursor=pointer]
+            - link " Launch Stack" [ref=f20e78] [cursor=pointer]:
+              - /url: /project/stacks/select_template
+              - generic [ref=f20e79]: 
+              - text: Launch Stack
+            - link " Preview Stack" [ref=f20e80] [cursor=pointer]:
+              - /url: /project/stacks/preview_template
+              - generic [ref=f20e81]: 
+              - text: Preview Stack
+            - button " Delete Stacks" [ref=f20e82]:
+              - generic [ref=f20e83]: 
+              - text: Delete Stacks
+            - generic [ref=f20e84]:
+              - link "More Actions ":
+                - /url: "#"
+                - text: More Actions
+                - generic: 
+              - text:   
+        - rowgroup [ref=f20e85]:
+          - row [ref=f20e86]:
+            - cell "Displaying 1 item" [ref=f20e87]
+          - row [ref=f20e88]:
+            - columnheader "" [ref=f20e89]
+            - columnheader "Stack Name" [ref=f20e92]
+            - columnheader "Created" [ref=f20e93]
+            - columnheader "Updated" [ref=f20e94]
+            - columnheader "Status" [ref=f20e95]
+            - columnheader "Actions" [ref=f20e96]
+        - rowgroup [ref=f20e97]:
+          - row [ref=f20e98]:
+            - cell "" [ref=f20e99]
+            - cell [ref=f20e102]:
+              - link "hello-ara" [ref=f20e103] [cursor=pointer]:
+                - /url: /project/stacks/stack/0284055b-1faf-49fe-bc4b-eebff42d7669/
+            - cell "12 minutes" [ref=f20e104]
+            - cell "Never" [ref=f20e105]
+            - cell "Create Complete" [ref=f20e106]
+            - cell [ref=f20e107]:
+              - generic [ref=f20e108]:
+                - button "Check Stack" [ref=f20e109] [cursor=pointer]
+                - link "" [ref=f20e110] [cursor=pointer]:
+                  - /url: "#"
+        - rowgroup [ref=f20e112]:
+          - row [ref=f20e113]:
+            - cell "Displaying 1 item" [ref=f20e114]
+  - generic [ref=f20e117]:
+    - generic [ref=f20e118]:
+      - link "" [ref=f20e119] [cursor=pointer]:
+        - /url: "#"
+      - heading "Select Profile" [level=3] [ref=f20e121]
+    - generic [ref=f20e122]:
+      - generic [ref=f20e124]:
+        - group [ref=f20e126]:
+          - generic [ref=f20e127]:
+            - generic [ref=f20e128]: Profile Source
+            - generic [ref=f20e129]: 
+            - button "File " [ref=f20e132] [cursor=pointer]:
+              - generic [ref=f20e133]: File
+              - generic [ref=f20e134]: 
+          - generic [ref=f20e135]:
+            - generic [ref=f20e136]: Profile File
+            - generic "A YAML file to upload." [ref=f20e137]: 
+            - button "Profile File" [ref=f20e140]
+          - text:  
+        - generic [ref=f20e141]:
+          - heading "Description:" [level=3] [ref=f20e142]
+          - paragraph [ref=f20e143]: A profile is used to automate the deployment of infrastructure, services, and applications.
+      - generic [ref=f20e144]:
+        - link "Cancel" [ref=f20e145] [cursor=pointer]:
+          - /url: /project/stacks/launch
+        - button "Next" [ref=f20e146] [cursor=pointer]

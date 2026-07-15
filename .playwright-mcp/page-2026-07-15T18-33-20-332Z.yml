@@ -1,0 +1,149 @@
+- generic [active] [ref=f45e1]:
+  - navigation [ref=f45e2]:
+    - generic [ref=f45e3]:
+      - link [ref=f45e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f45e6]
+      - generic [ref=f45e7]:
+        - list [ref=f45e8] [cursor=pointer]:
+          - listitem [ref=f45e9]:
+            - button " New York University  nyunetworks " [ref=f45e10]:
+              - generic [ref=f45e11]: 
+              - generic [ref=f45e12]:
+                - text: New York University
+                - generic [ref=f45e13]: 
+                - text: nyunetworks
+              - generic [ref=f45e14]: 
+            - text:  
+        - list [ref=f45e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f45e16]:
+            - button " ffund@nyu.edu " [ref=f45e17]:
+              - generic [ref=f45e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f45e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f45e20]:
+    - generic [ref=f45e22]:
+      - link "" [ref=f45e23] [cursor=pointer]:
+        - /url: "#"
+      - paragraph [ref=f45e25]:
+        - strong [ref=f45e26]: "Success:"
+        - text: "Deleted Stack: hello-ara-test-ffund"
+    - navigation [ref=f45e27]:
+      - list [ref=f45e28] [cursor=pointer]:
+        - listitem [ref=f45e29]:
+          - generic [ref=f45e30]:
+            - text: Project
+            - generic [ref=f45e31]: 
+          - list [ref=f45e32]:
+            - link "Jupyter Notebook" [ref=f45e34]:
+              - /url: /project/jupyter/
+            - listitem [ref=f45e35]:
+              - generic [ref=f45e36]:
+                - text: Summary
+                - generic [ref=f45e37]: 
+            - listitem [ref=f45e38]:
+              - generic [ref=f45e39]:
+                - text: Container
+                - generic [ref=f45e40]: 
+            - listitem [ref=f45e41]:
+              - generic [ref=f45e42]:
+                - text: Network
+                - generic [ref=f45e43]: 
+            - listitem [ref=f45e44]:
+              - generic [ref=f45e45]:
+                - text: Orchestration
+                - generic [ref=f45e46]: 
+              - link "Stacks" [ref=f45e48]:
+                - /url: /project/stacks/
+            - listitem [ref=f45e49]:
+              - generic [ref=f45e50]:
+                - text: Object Store
+                - generic [ref=f45e51]: 
+            - listitem [ref=f45e52]:
+              - generic [ref=f45e53]:
+                - text: Reservations
+                - generic [ref=f45e54]: 
+        - listitem [ref=f45e55]:
+          - generic [ref=f45e56]:
+            - text: Identity
+            - generic [ref=f45e57]: 
+        - listitem [ref=f45e58]:
+          - generic [ref=f45e59]:
+            - text: Data
+            - generic [ref=f45e60]: 
+    - generic [ref=f45e64]:
+      - list [ref=f45e66]:
+        - listitem [ref=f45e67]: Project
+        - listitem [ref=f45e68]: / Orchestration
+        - listitem [ref=f45e69]: / Stacks
+      - heading "Stacks" [level=1] [ref=f45e71]
+      - table [ref=f45e74]:
+        - caption [ref=f45e75]:
+          - generic [ref=f45e76]:
+            - generic [ref=f45e77]:
+              - button "Stack Name = " [ref=f45e79] [cursor=pointer]:
+                - text: Stack Name =
+                - generic [ref=f45e80]: 
+              - textbox [ref=f45e81]
+              - button "Filter" [ref=f45e82] [cursor=pointer]
+            - link " Launch Stack" [ref=f45e83] [cursor=pointer]:
+              - /url: /project/stacks/select_template
+              - generic [ref=f45e84]: 
+              - text: Launch Stack
+            - link " Preview Stack" [ref=f45e85] [cursor=pointer]:
+              - /url: /project/stacks/preview_template
+              - generic [ref=f45e86]: 
+              - text: Preview Stack
+            - button " Delete Stacks" [ref=f45e87]:
+              - generic [ref=f45e88]: 
+              - text: Delete Stacks
+            - generic [ref=f45e89]:
+              - link "More Actions ":
+                - /url: "#"
+                - text: More Actions
+                - generic: 
+              - text:   
+        - rowgroup [ref=f45e90]:
+          - row [ref=f45e91]:
+            - cell "Displaying 2 items" [ref=f45e92]
+          - row [ref=f45e93]:
+            - columnheader "" [ref=f45e94]
+            - columnheader [ref=f45e98] [cursor=pointer]
+            - columnheader [ref=f45e100] [cursor=pointer]
+            - columnheader [ref=f45e102] [cursor=pointer]
+            - columnheader [ref=f45e104] [cursor=pointer]
+            - columnheader [ref=f45e106]
+        - rowgroup [ref=f45e108]:
+          - row [ref=f45e109]:
+            - cell "" [ref=f45e110]
+            - cell [ref=f45e113]:
+              - link "hello-ara-test-ffund" [ref=f45e114] [cursor=pointer]:
+                - /url: /project/stacks/stack/be0e0c6c-fc94-4230-ad39-948e7dc0763e/
+            - cell "2 minutes" [ref=f45e115]
+            - cell "0 minutes" [ref=f45e116]
+            - cell "Delete In Progress" [ref=f45e117]
+            - cell [ref=f45e118]:
+              - generic [ref=f45e119]:
+                - button "Check Stack" [ref=f45e120] [cursor=pointer]
+                - link "" [ref=f45e121] [cursor=pointer]:
+                  - /url: "#"
+          - row [ref=f45e123]:
+            - cell "" [ref=f45e124]
+            - cell [ref=f45e127]:
+              - link "hello-ara-ffund" [ref=f45e128] [cursor=pointer]:
+                - /url: /project/stacks/stack/07548191-b79d-450b-b9e0-8fcb7632c701/
+            - cell "12 minutes" [ref=f45e129]
+            - cell "Never" [ref=f45e130]
+            - cell "Create Complete" [ref=f45e131]
+            - cell [ref=f45e132]:
+              - generic [ref=f45e133]:
+                - button "Check Stack" [ref=f45e134] [cursor=pointer]
+                - link "" [ref=f45e135] [cursor=pointer]:
+                  - /url: "#"
+        - rowgroup [ref=f45e137]:
+          - row [ref=f45e138]:
+            - cell "Displaying 2 items" [ref=f45e139]

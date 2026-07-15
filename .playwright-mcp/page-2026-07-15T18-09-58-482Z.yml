@@ -1,0 +1,106 @@
+- generic [active] [ref=f32e1]:
+  - navigation [ref=f32e2]:
+    - generic [ref=f32e3]:
+      - link [ref=f32e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f32e6]
+      - generic [ref=f32e7]:
+        - list [ref=f32e8] [cursor=pointer]:
+          - listitem [ref=f32e9]:
+            - button " New York University  nyunetworks " [ref=f32e10]:
+              - generic [ref=f32e11]: 
+              - generic [ref=f32e12]:
+                - text: New York University
+                - generic [ref=f32e13]: 
+                - text: nyunetworks
+              - generic [ref=f32e14]: 
+            - text:  
+        - list [ref=f32e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f32e16]:
+            - button " ffund@nyu.edu " [ref=f32e17]:
+              - generic [ref=f32e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f32e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f32e20]:
+    - navigation [ref=f32e22]:
+      - list [ref=f32e23] [cursor=pointer]:
+        - listitem [ref=f32e24]:
+          - generic [ref=f32e25]:
+            - text: Project
+            - generic [ref=f32e26]: 
+          - list [ref=f32e27]:
+            - link "Jupyter Notebook" [ref=f32e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f32e30]:
+              - generic [ref=f32e31]:
+                - text: Summary
+                - generic [ref=f32e32]: 
+            - listitem [ref=f32e33]:
+              - generic [ref=f32e34]:
+                - text: Container
+                - generic [ref=f32e35]: 
+            - listitem [ref=f32e36]:
+              - generic [ref=f32e37]:
+                - text: Network
+                - generic [ref=f32e38]: 
+            - listitem [ref=f32e39]:
+              - generic [ref=f32e40]:
+                - text: Orchestration
+                - generic [ref=f32e41]: 
+              - link "Stacks" [ref=f32e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f32e44]:
+              - generic [ref=f32e45]:
+                - text: Object Store
+                - generic [ref=f32e46]: 
+            - listitem [ref=f32e47]:
+              - generic [ref=f32e48]:
+                - text: Reservations
+                - generic [ref=f32e49]: 
+        - listitem [ref=f32e50]:
+          - generic [ref=f32e51]:
+            - text: Identity
+            - generic [ref=f32e52]: 
+        - listitem [ref=f32e53]:
+          - generic [ref=f32e54]:
+            - text: Data
+            - generic [ref=f32e55]: 
+    - generic [ref=f32e59]:
+      - list [ref=f32e61]:
+        - listitem [ref=f32e62]: Project
+        - listitem [ref=f32e63]: / Orchestration
+        - listitem [ref=f32e64]:
+          - text: /
+          - link "Stacks" [ref=f32e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f32e66]: / hello-ara
+      - generic [ref=f32e68]:
+        - generic [ref=f32e69]: hello-ara
+        - generic [ref=f32e72]:
+          - button "Check Stack" [ref=f32e73] [cursor=pointer]
+          - link "" [ref=f32e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f32e77]:
+        - list [ref=f32e78] [cursor=pointer]:
+          - listitem [ref=f32e79]:
+            - link "Topology" [ref=f32e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f32e81]:
+            - link "Overview" [ref=f32e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f32e83]:
+            - link "Resources" [ref=f32e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f32e85]:
+            - link "Events" [ref=f32e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f32e87]:
+            - link "Template" [ref=f32e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - generic [ref=f32e94]:
+          - heading "hello-ara" [level=3] [ref=f32e95]
+          - paragraph [ref=f32e96]: Create Complete

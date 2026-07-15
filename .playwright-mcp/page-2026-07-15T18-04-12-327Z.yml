@@ -1,0 +1,137 @@
+- generic [active] [ref=f23e1]:
+  - navigation [ref=f23e2]:
+    - generic [ref=f23e3]:
+      - link [ref=f23e5] [cursor=pointer]:
+        - /url: /home/
+        - img "Ara Dashboard" [ref=f23e6]
+      - generic [ref=f23e7]:
+        - list [ref=f23e8] [cursor=pointer]:
+          - listitem [ref=f23e9]:
+            - button " New York University  nyunetworks " [ref=f23e10]:
+              - generic [ref=f23e11]: 
+              - generic [ref=f23e12]:
+                - text: New York University
+                - generic [ref=f23e13]: 
+                - text: nyunetworks
+              - generic [ref=f23e14]: 
+            - text:  
+        - list [ref=f23e15] [cursor=pointer]:
+          - text: 
+          - listitem
+          - listitem [ref=f23e16]:
+            - button " ffund@nyu.edu " [ref=f23e17]:
+              - generic [ref=f23e18]: 
+              - text: ffund@nyu.edu
+              - generic [ref=f23e19]: 
+            - text:      
+          - listitem
+  - generic [ref=f23e20]:
+    - navigation [ref=f23e22]:
+      - list [ref=f23e23] [cursor=pointer]:
+        - listitem [ref=f23e24]:
+          - generic [ref=f23e25]:
+            - text: Project
+            - generic [ref=f23e26]: 
+          - list [ref=f23e27]:
+            - link "Jupyter Notebook" [ref=f23e29]:
+              - /url: /project/jupyter/
+            - listitem [ref=f23e30]:
+              - generic [ref=f23e31]:
+                - text: Summary
+                - generic [ref=f23e32]: 
+            - listitem [ref=f23e33]:
+              - generic [ref=f23e34]:
+                - text: Container
+                - generic [ref=f23e35]: 
+            - listitem [ref=f23e36]:
+              - generic [ref=f23e37]:
+                - text: Network
+                - generic [ref=f23e38]: 
+            - listitem [ref=f23e39]:
+              - generic [ref=f23e40]:
+                - text: Orchestration
+                - generic [ref=f23e41]: 
+              - link "Stacks" [ref=f23e43]:
+                - /url: /project/stacks/
+            - listitem [ref=f23e44]:
+              - generic [ref=f23e45]:
+                - text: Object Store
+                - generic [ref=f23e46]: 
+            - listitem [ref=f23e47]:
+              - generic [ref=f23e48]:
+                - text: Reservations
+                - generic [ref=f23e49]: 
+        - listitem [ref=f23e50]:
+          - generic [ref=f23e51]:
+            - text: Identity
+            - generic [ref=f23e52]: 
+        - listitem [ref=f23e53]:
+          - generic [ref=f23e54]:
+            - text: Data
+            - generic [ref=f23e55]: 
+    - generic [ref=f23e59]:
+      - list [ref=f23e61]:
+        - listitem [ref=f23e62]: Project
+        - listitem [ref=f23e63]: / Orchestration
+        - listitem [ref=f23e64]:
+          - text: /
+          - link "Stacks" [ref=f23e65] [cursor=pointer]:
+            - /url: /project/stacks/
+        - listitem [ref=f23e66]: / hello-ara-running-002
+      - generic [ref=f23e68]:
+        - generic [ref=f23e69]: hello-ara-running-002
+        - generic [ref=f23e72]:
+          - button "Check Stack" [ref=f23e73] [cursor=pointer]
+          - link "" [ref=f23e74] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f23e77]:
+        - list [ref=f23e78] [cursor=pointer]:
+          - listitem [ref=f23e79]:
+            - link "Topology" [ref=f23e80]:
+              - /url: "?tab=stack_details__topology"
+          - listitem [ref=f23e81]:
+            - link "Overview" [ref=f23e82]:
+              - /url: "?tab=stack_details__overview"
+          - listitem [ref=f23e83]:
+            - link "Resources" [ref=f23e84]:
+              - /url: "?tab=stack_details__resources"
+          - listitem [ref=f23e85]:
+            - link "Events" [ref=f23e86]:
+              - /url: "?tab=stack_details__events"
+          - listitem [ref=f23e87]:
+            - link "Template" [ref=f23e88]:
+              - /url: "?tab=stack_details__stack_template"
+        - table [ref=f23e92]:
+          - caption [ref=f23e93]
+          - rowgroup [ref=f23e94]:
+            - row [ref=f23e95]:
+              - cell "Displaying 2 items" [ref=f23e96]
+            - row [ref=f23e97]:
+              - columnheader [ref=f23e98] [cursor=pointer]
+              - columnheader [ref=f23e100] [cursor=pointer]
+              - columnheader [ref=f23e102] [cursor=pointer]
+              - columnheader [ref=f23e104] [cursor=pointer]
+              - columnheader [ref=f23e106] [cursor=pointer]
+              - columnheader [ref=f23e108] [cursor=pointer]
+          - rowgroup [ref=f23e110]:
+            - row [ref=f23e111]:
+              - cell [ref=f23e112]:
+                - link "container" [ref=f23e113] [cursor=pointer]:
+                  - /url: /project/stacks/stack/b32b7780-93da-4094-9ba5-be22e5427c37/container/
+              - cell "2d1c18ed-b6d6-4bee-baba-3f9290f92839" [ref=f23e114]
+              - cell "OS::Zun::Container" [ref=f23e115]
+              - cell "2 minutes" [ref=f23e116]
+              - cell "Create Complete" [ref=f23e117]
+              - cell "state changed" [ref=f23e118]
+            - row [ref=f23e119]:
+              - cell [ref=f23e120]:
+                - link "lease" [ref=f23e121] [cursor=pointer]:
+                  - /url: /project/stacks/stack/b32b7780-93da-4094-9ba5-be22e5427c37/lease/
+              - cell "65a3af0f-51ce-4ef7-808b-b7c0cade41f8" [ref=f23e122]
+              - cell "OS::Blazar::Lease" [ref=f23e123]
+              - cell "2 minutes" [ref=f23e124]
+              - cell "Create Complete" [ref=f23e125]
+              - cell "state changed" [ref=f23e126]
+          - rowgroup [ref=f23e127]:
+            - row [ref=f23e128]:
+              - cell "Displaying 2 items" [ref=f23e129]
