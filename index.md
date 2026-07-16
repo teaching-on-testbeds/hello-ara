@@ -16,7 +16,7 @@ To use ARA, you'll need to prepare your workstation (the laptop or PC you are go
 
 You will need a terminal application with SSH to connect to your ARA resources. You may use the built-in terminal on Linux or Mac. On Windows, you may use [cmder](https://cmder.app/) or any other terminal application that has an SSH client.
 
-### Generate an SSH key
+#### Generate an SSH key
 
 Next, you must generate SSH keys that you will later add to your ARA profile. You will use these keys when connecting to resources in ARA.
 
@@ -74,8 +74,22 @@ The command creates two files:
 * `~/.ssh/id_ed25519_ara` is your private key. Keep it secret and do not upload it.
 * `~/.ssh/id_ed25519_ara.pub` is your public key. You will upload this file to ARA.
 
+You will also need the *contents* of your public key file, which you'll use whenever you start an experiment. Run
 
-## Log in to ARA
+```
+cat ~/.ssh/id_ed25519_ara.pub
+```
+
+The output will start with `ssh-ed25519`, e.g.
+
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKsJ8MzC+ml/yEWbCsJJOqUENXumlhE+CYOvDkSI/Kk1 ffund@example.com
+```
+
+Copy the entire output.
+
+
+## Set up your ARA account
 
 Now that everything is set up on your workstation, it's time to log in to ARA. Open the [ARA Dashboard](https://portal.arawireless.org/). On the login page, choose an authentication method from the "Authenticate using" menu as follows:
 
@@ -85,16 +99,16 @@ Now that everything is set up on your workstation, it's time to log in to ARA. O
 1. Choose "Globus Auth", and click "Sign In".
 2. On the Globus sign-in page, select your organization under "Use your organizational login", then click "Continue". (If your organization does not appear in the list but your university provides an institutional Google account, find "Log in using less common options" and click the Google icon. When Google asks you to choose an account, select your university-issued account. )
 3. Log in with your institutional credentials.
-4. After authentication, Globus will return you to the ARA Dashboard.
+
+>You must authenticate with an email address issued by your university. For example, an NYU student must use an `nyu.edu` address in order to be able to join an NYU project.
+
+After authentication, Globus will return you to the ARA Dashboard.
 
 ![](images/globus-login.png)
 
->[!IMPORTANT]
->You must authenticate with an email address issued by your university. For example, an NYU student must use an `nyu.edu` address.
+> If it is not possible to log in with your institutional email address, your advisor or instructor may tell you to use Keystone authentication instead of Globus. In this case, they will also provide your ARA username *and password*. (Don't try to use Keystone unless you have been given a password by your advisor/instructor!) Select "Keystone Credentials" instead of "Globus Auth" in the authentication menu, enter those credentials, and click "Sign In".
 
-> If it is not possible to log in with your institutional email address, your advisor or instructor may have you use Keystone authentication instead. In this case, they will also provide your ARA username *and password*. Select "Keystone Credentials", enter those credentials, and click "Sign In".
-
-### Upload your public key
+#### Upload your public key
 
 Next, you will need to upload the public part of your key pair to the ARA Dashboard, so that you will be able to use it to log on to ARA resources!
 
@@ -107,7 +121,7 @@ From the ARA dashboard,
 
 ![](images/ara-upload-public-key.png)
 
-The page also shows your ARA jumpbox username and an example SSH command. Your username will differ from the one shown in the screenshot; use the username displayed in your own dashboard.
+This page also shows your ARA jumpbox username and an example SSH command. Your username will differ from the one shown in the screenshot; use the username displayed in your own dashboard.
 
 After you have uploaded a key, test it by connecting to the jumpbox. Run the command shown on the upload page, replacing the example identity filename with *your* ARA private key:
 
@@ -115,8 +129,15 @@ After you have uploaded a key, test it by connecting to the jumpbox. Run the com
 ssh -i ~/.ssh/id_ed25519_ara YOUR_USERNAME@jbox.arawireless.org
 ```
 
-Use the username displayed in *your* dashboard in place of `YOUR_USERNAME`. The first time you connect, SSH may ask you to confirm the host key. Type `yes`, and press Enter. A successful connection will open a shell on the ARA jumpbox.
-## Start an experiment
+Use the username displayed in *your* dashboard in place of `YOUR_USERNAME`. The first time you connect, SSH may ask you to confirm the host key. Type `yes`, and press Enter. 
+
+A successful connection will open a shell on the ARA jumpbox. Run 
+
+```
+exit
+```
+
+in this shell to return to your local terminal.## Start an experiment
 
 Now, you are ready to run an experiment on ARA!
 
@@ -146,23 +167,38 @@ If the host is reserved soon, return to the Resource Overview and choose another
 
 ### Create a lease and launch a container
 
-We will use a Heat template to reserve the sandbox host and launch a container on it. The template will ask for the three-digit sandbox host number and the contents of your SSH public key.
+We will use an "orchestration template" to reserve the sandbox host and launch a container on it. 
 
-Download the [`hello_ara_sandbox.yaml`](resources/hello_ara_sandbox.yaml) Heat template to your computer.
+First, download the [`hello_ara_sandbox.yaml`](resources/hello_ara_sandbox.yaml) template to your computer.
 
-In the ARA dashboard, go to `Project > Orchestration > Stacks` and click "Launch Stack". Upload the template. For the stack name, use `hello-ara-USERNAME`, where `USERNAME` is the first part of your ARA username. For example, use `hello-ara-ffund` if your username is `ffund@nyu.edu`. Then enter the sandbox host number and the contents of your public key when prompted. Click "Launch".
+In the ARA dashboard, go to `Project > Orchestration > Stacks` and click "Launch Stack". Upload the template. You will be asked to specify three parameters:
 
-> If the stack fails with "Start Date Must Be Later Than Current Date", submit it again. This can happen when the lease starts at the same minute that you submit the stack.
+* For the stack name, use `hello-ara-USERNAME`, where `USERNAME` is the first part of your ARA username. For example, use `hello-ara-ffund` if your username is `ffund@nyu.edu`. 
+* Specify the three-digit sandbox host number you identified earlier (e.g. `001`).
+* Finally, paste in the full contents of your SSH public key.
 
-When the stack status changes to "Create Complete", open the stack and look under "Outputs". The `container_addresses` output lists the container's internal address and its network port ID. To find the floating IP, open `Project > Container > Containers`, find your container, and expand its details. Use the floating IP shown there to connect through the jumpbox:
+Then, click "Launch".
+
+> Sometimes, the stack may fail with an error message "Start Date Must Be Later Than Current Date". This can happen when the lease starts at the same minute that you submit the stack. If this happens, you can delete the stack and submit a new one!
+
+When the stack status changes to "Create Complete", it will have created a "container" running on the sandbox host. You'll need its address in order to access it over SSH.
+
+To find the floating IP associated with your container, open `Project > Container > Containers`, find your container (with the selected sandbox host number as part of its name!), and click on it to see an overview of the container details. On the right side, next to "Addresses", it will have an address in the form `10.189.X.Y` (for some `X` and `Y`) labeled as the "floating IP address". Make a note of this address.
+
+> Sometimes, ARA may fail to automatically assign a floating IP to your container. If that happens, you can still assign one yourself! Make a note of the `10.0.4.X` address associated with your container. Then, in the ARA Portal, click on Network > Floating IPs. Click the "Allocate IP to Project" button, then "Allocate IP". Next to the newly added IP, click "Associate", and under "Portal to be Associated", select the `10.0.4.X` address associated with your container.
+
+Then, in your terminal, use the floating IP shown there to connect through the jumpbox:
 
 ```
 ssh -i ~/.ssh/id_ed25519_ara -J YOUR_USERNAME@jbox.arawireless.org root@FLOATING_IP
 ```
 
-Replace `YOUR_USERNAME` with the jumpbox username shown when you uploaded your public key, and replace `FLOATING_IP` with the floating IP from `container_addresses`.
+where you replace `YOUR_USERNAME` with the jumpbox username shown when you uploaded your public key, and replace `FLOATING_IP` with the floating IP from `container_addresses`.
 
-After you connect to the container, verify that both radios are available:
+### Verify radio hardware
+
+
+After you connect to the container, verify that two radios are available:
 
 ```
 uhd_find_devices
@@ -172,36 +208,67 @@ The output should list two USRP B210 radio devices. Make a note of the serial nu
 
 ### Send a signal from one radio to another
 
-Use one radio to transmit a test tone and the other radio to receive it. Run the transmitter and receiver in separate SSH sessions. Use the host number to select a frequency for your experiment:
+Now we are ready to send a signal from one radio to another! Here is a brief demo of what we will see:
 
-The frequency in MHz is `3400 + 5 * HOST_NUMBER`. For example, host `002` uses `3410 MHz`, or `3410000000 Hz`. Replace `FREQUENCY_HZ` in both commands below with the frequency for your host.
+![](images/spectrum.gif)
 
-On the first SSH session, transmit a low-power sine wave using UHD Device 0's serial number:
 
-```
-/usr/local/lib/uhd/examples/tx_waveforms \
-  --args "serial=DEVICE_0_SERIAL" \
-  --wave-type SINE \
-  --wave-freq 100000 \
-  --freq FREQUENCY_HZ \
-  --rate 5e6 \
-  --gain 10 \
-  --ant TX/RX
-```
+* First, a live view of what the receiver sees will show no meaningful transmission - just the "noise floor".
+* Then, once we start the transmitter, the receiver will show a signal at a 250 kHz offset from the center.
+* After we stop the transmitter, the signal will disappear and we will just see noise floor again.
 
-On the second SSH session, use UHD Device 1's serial number to look for the signal:
+You will need two SSH sessions: one for the transmitter, and one for the receiver. Use the same SSH command in a new terminal window to open a second SSH session.
 
-```
+In the first SSH session, start a receiver. Use the command below, but:
+
+* in place of `DEVICE_0_SERIAL`, substitute the serial number shown in the output of `uhd_find_devices` for the *first* radio
+* in place of `FREQUENCY_HZ`, use `3400 + 5 * HOST_NUMBER` followed by `e6`, where `HOST_NUMBER` is the sandbox host number you are using For example, host `002` uses `3410e6` (3410 MHz).
+
+```bash
+# runs on sandbox host
 /usr/local/lib/uhd/examples/rx_ascii_art_dft \
-  --args "serial=DEVICE_1_SERIAL" \
-  --ref-lvl -60 \
-  --dyn-rng 40 \
   --step 10000000 \
-  --freq FREQUENCY_HZ \
   --num-bins 1024 \
-  --rate 5e6 \
-  --frame-rate 2 \
-  --ant RX2
+  --rate 1e6 \
+  --frame-rate 5 \
+  --ref-lvl -30 \
+  --dyn-rng 50 \
+  --gain 70 \
+  --ant RX2 \
+  --freq FREQUENCY_HZ \
+  --args "serial=DEVICE_0_SERIAL" 
 ```
 
-Replace `DEVICE_0_SERIAL` and `DEVICE_1_SERIAL` with the serial numbers shown by `uhd_find_devices`. The receiver should show a peak near the transmitted 100 kHz offset. Press Ctrl+C in both sessions when finished.
+You will see a live visualization of the received wireless signal power around the frequency you have specified. Leave this running.
+
+
+In the second SSH session, transmit a wireless signal within that frequency range. Use the command below, but:
+
+* in place of `DEVICE_1_SERIAL`, substitute the serial number shown in the output of `uhd_find_devices` for the *second* radio
+* in place of `FREQUENCY_HZ`, use the same frequency you computed previously.
+
+```bash
+# runs on sandbox host
+/usr/local/lib/uhd/examples/tx_waveforms \
+  --wave-type SINE \
+  --wave-freq 250000 \
+  --rate 1e6 \
+  --gain 40 \
+  --ant TX/RX \
+  --freq FREQUENCY_HZ \
+  --args "serial=DEVICE_0_SERIAL" 
+```
+
+Once the transmitter starts, the receiver should show a peak near the transmitted 250 kHz offset (i.e. near the right side of the display). 
+
+
+Press Ctrl+C in both sessions when finished.
+
+
+## Clean up resources
+
+Your experiment resources should automatically be deleted after two hours, but you can also manually delete anything that is left over:
+
+* Under Project > Orchestration > Stacks, use the drop-down menu at the right side, next to your stack (the one with your name in it!) and "Delete Stack". 
+
+Leave other resources - not associated with your experiment - alone. These belong to other users that are part of the same ARA "project" as you (e.g. your classmates or lab mates).

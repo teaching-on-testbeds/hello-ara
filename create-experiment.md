@@ -46,6 +46,8 @@ When the stack status changes to "Create Complete", it will have created a "cont
 
 To find the floating IP associated with your container, open `Project > Container > Containers`, find your container (with the selected sandbox host number as part of its name!), and click on it to see an overview of the container details. On the right side, next to "Addresses", it will have an address in the form `10.189.X.Y` (for some `X` and `Y`) labeled as the "floating IP address". Make a note of this address.
 
+> Sometimes, ARA may fail to automatically assign a floating IP to your container. If that happens, you can still assign one yourself! Make a note of the `10.0.4.X` address associated with your container. Then, in the ARA Portal, click on Network > Floating IPs. Click the "Allocate IP to Project" button, then "Allocate IP". Next to the newly added IP, click "Associate", and under "Portal to be Associated", select the `10.0.4.X` address associated with your container.
+
 Then, in your terminal, use the floating IP shown there to connect through the jumpbox:
 
 ```
@@ -67,16 +69,24 @@ The output should list two USRP B210 radio devices. Make a note of the serial nu
 
 ### Send a signal from one radio to another
 
-Now we are ready to send a signal from one radio to another!
+Now we are ready to send a signal from one radio to another! Here is a brief demo of what we will see:
+
+![](images/spectrum.gif)
+
+
+* First, a live view of what the receiver sees will show no meaningful transmission - just the "noise floor".
+* Then, once we start the transmitter, the receiver will show a signal at a 250 kHz offset from the center.
+* After we stop the transmitter, the signal will disappear and we will just see noise floor again.
 
 You will need two SSH sessions: one for the transmitter, and one for the receiver. Use the same SSH command in a new terminal window to open a second SSH session.
 
 In the first SSH session, start a receiver. Use the command below, but:
 
 * in place of `DEVICE_0_SERIAL`, substitute the serial number shown in the output of `uhd_find_devices` for the *first* radio
-* in place of `FREQUENCY_HZ`, use `3400 + 5 * HOST_NUMBER` followed by `e6`, where `HOST_NUMBER` is the sandbox host number you are using For example, host `002` uses `3410e6`.
+* in place of `FREQUENCY_HZ`, use `3400 + 5 * HOST_NUMBER` followed by `e6`, where `HOST_NUMBER` is the sandbox host number you are using For example, host `002` uses `3410e6` (3410 MHz).
 
-```
+```bash
+# runs on sandbox host
 /usr/local/lib/uhd/examples/rx_ascii_art_dft \
   --step 10000000 \
   --num-bins 1024 \
@@ -90,13 +100,16 @@ In the first SSH session, start a receiver. Use the command below, but:
   --args "serial=DEVICE_0_SERIAL" 
 ```
 
+You will see a live visualization of the received wireless signal power around the frequency you have specified. Leave this running.
 
-In the second SSH session, transmit a low-power sine wave. Use the command below, but:
+
+In the second SSH session, transmit a wireless signal within that frequency range. Use the command below, but:
 
 * in place of `DEVICE_1_SERIAL`, substitute the serial number shown in the output of `uhd_find_devices` for the *second* radio
 * in place of `FREQUENCY_HZ`, use the same frequency you computed previously.
 
-```
+```bash
+# runs on sandbox host
 /usr/local/lib/uhd/examples/tx_waveforms \
   --wave-type SINE \
   --wave-freq 250000 \
@@ -107,9 +120,8 @@ In the second SSH session, transmit a low-power sine wave. Use the command below
   --args "serial=DEVICE_0_SERIAL" 
 ```
 
-
-
 Once the transmitter starts, the receiver should show a peak near the transmitted 250 kHz offset (i.e. near the right side of the display). 
+
 
 Press Ctrl+C in both sessions when finished.
 
@@ -119,7 +131,5 @@ Press Ctrl+C in both sessions when finished.
 Your experiment resources should automatically be deleted after two hours, but you can also manually delete anything that is left over:
 
 * Under Project > Orchestration > Stacks, use the drop-down menu at the right side, next to your stack (the one with your name in it!) and "Delete Stack". 
-* Under Reservations > Leases, delete the lease that was created as part of your stack (with your sandbox host ID)
-* Under Container > Containers, find the container that was created as part of your stack (with your sandbox host ID). Use the drop-down menu to "Stop and Delete Container".
 
 Leave other resources - not associated with your experiment - alone. These belong to other users that are part of the same ARA "project" as you (e.g. your classmates or lab mates).

@@ -16,7 +16,7 @@ To use ARA, you'll need to prepare your workstation (the laptop or PC you are go
 
 You will need a terminal application with SSH to connect to your ARA resources. You may use the built-in terminal on Linux or Mac. On Windows, you may use [cmder](https://cmder.app/) or any other terminal application that has an SSH client.
 
-### Generate an SSH key
+#### Generate an SSH key
 
 Next, you must generate SSH keys that you will later add to your ARA profile. You will use these keys when connecting to resources in ARA.
 
@@ -74,15 +74,22 @@ The command creates two files:
 * `~/.ssh/id_ed25519_ara` is your private key. Keep it secret and do not upload it.
 * `~/.ssh/id_ed25519_ara.pub` is your public key. You will upload this file to ARA.
 
-You will also need to copy the *contents* of your public key file, which you'll use whenever you start an experiment. Run
+You will also need the *contents* of your public key file, which you'll use whenever you start an experiment. Run
 
 ```
 cat ~/.ssh/id_ed25519_ara.pub
 ```
 
-and copy the entire output (starting from the string `ssh-ed25519`).
+The output will start with `ssh-ed25519`, e.g.
 
-## Log in to ARA
+```
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKsJ8MzC+ml/yEWbCsJJOqUENXumlhE+CYOvDkSI/Kk1 ffund@example.com
+```
+
+Copy the entire output.
+
+
+## Set up your ARA account
 
 Now that everything is set up on your workstation, it's time to log in to ARA. Open the [ARA Dashboard](https://portal.arawireless.org/). On the login page, choose an authentication method from the "Authenticate using" menu as follows:
 
@@ -99,9 +106,9 @@ After authentication, Globus will return you to the ARA Dashboard.
 
 ![](images/globus-login.png)
 
-> If it is not possible to log in with your institutional email address, your advisor or instructor may have you use Keystone authentication instead. In this case, they will also provide your ARA username *and password*. Select "Keystone Credentials", enter those credentials, and click "Sign In".
+> If it is not possible to log in with your institutional email address, your advisor or instructor may tell you to use Keystone authentication instead of Globus. In this case, they will also provide your ARA username *and password*. (Don't try to use Keystone unless you have been given a password by your advisor/instructor!) Select "Keystone Credentials" instead of "Globus Auth" in the authentication menu, enter those credentials, and click "Sign In".
 
-### Upload your public key
+#### Upload your public key
 
 Next, you will need to upload the public part of your key pair to the ARA Dashboard, so that you will be able to use it to log on to ARA resources!
 
@@ -114,7 +121,7 @@ From the ARA dashboard,
 
 ![](images/ara-upload-public-key.png)
 
-The page also shows your ARA jumpbox username and an example SSH command. Your username will differ from the one shown in the screenshot; use the username displayed in your own dashboard.
+This page also shows your ARA jumpbox username and an example SSH command. Your username will differ from the one shown in the screenshot; use the username displayed in your own dashboard.
 
 After you have uploaded a key, test it by connecting to the jumpbox. Run the command shown on the upload page, replacing the example identity filename with *your* ARA private key:
 
