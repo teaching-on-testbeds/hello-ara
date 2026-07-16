@@ -50,6 +50,14 @@ To find the floating IP associated with your container, open "Project > Containe
 
 > Sometimes, ARA may fail to automatically assign a floating IP to your container. If that happens, you can still assign one yourself! Make a note of the `10.0.4.X` address associated with your container. Then, in the ARA Portal, click on Network > Floating IPs. Click the "Allocate IP to Project" button, then "Allocate IP". Next to the newly added IP, click "Associate", and under "Portal to be Associated", select the `10.0.4.X` address associated with your container.
 
+The SSH service is configured automatically when the container starts, but you won't be able to connect over SSH until it is fully configured. Click on the "Logs" tab in the container view, and then click "Refresh" as needed every few minutes, until you see
+
+```
+ * Restarting OpenBSD Secure Shell server sshd      [ OK ]
+```
+
+in the log. This indicates that the SSH service is configured and you can log in.
+
 Then, in your terminal, use the floating IP shown there to connect through the jumpbox:
 
 ```
