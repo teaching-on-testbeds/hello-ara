@@ -169,9 +169,11 @@ If the host is reserved soon, return to the Resource Overview and choose another
 
 We will use an "orchestration template" to reserve the sandbox host and launch a container on it. 
 
-First, download the [`hello_ara_sandbox.yaml`](resources/hello_ara_sandbox.yaml) template to your computer.
+First, download the [`hello_ara_sandbox.yaml`](resources/hello_ara_sandbox.yaml) template to your computer from the following link:
 
-In the ARA dashboard, go to `Project > Orchestration > Stacks` and click "Launch Stack". Upload the template. You will be asked to specify three parameters:
+[`hello_ara_sandbox.yaml`](resources/hello_ara_sandbox.yaml)
+
+In the ARA dashboard, go to "Project > Orchestration > Stacks" and click "Launch Stack". Upload the template. You will be asked to specify three parameters:
 
 * For the stack name, use `hello-ara-USERNAME`, where `USERNAME` is the first part of your ARA username. For example, use `hello-ara-ffund` if your username is `ffund@nyu.edu`. 
 * Specify the three-digit sandbox host number you identified earlier (e.g. `001`).
@@ -183,7 +185,7 @@ Then, click "Launch".
 
 When the stack status changes to "Create Complete", it will have created a "container" running on the sandbox host. You'll need its address in order to access it over SSH.
 
-To find the floating IP associated with your container, open `Project > Container > Containers`, find your container (with the selected sandbox host number as part of its name!), and click on it to see an overview of the container details. On the right side, next to "Addresses", it will have an address in the form `10.189.X.Y` (for some `X` and `Y`) labeled as the "floating IP address". Make a note of this address.
+To find the floating IP associated with your container, open "Project > Container > Containers", find your container (with the selected sandbox host number as part of its name!), and click on it to see an overview of the container details. On the right side, next to "Addresses", it will have an address in the form `10.189.X.Y` (for some `X` and `Y`) labeled as the "floating IP address". Make a note of this address.
 
 > Sometimes, ARA may fail to automatically assign a floating IP to your container. If that happens, you can still assign one yourself! Make a note of the `10.0.4.X` address associated with your container. Then, in the ARA Portal, click on Network > Floating IPs. Click the "Allocate IP to Project" button, then "Allocate IP". Next to the newly added IP, click "Associate", and under "Portal to be Associated", select the `10.0.4.X` address associated with your container.
 
