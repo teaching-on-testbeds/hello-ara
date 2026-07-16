@@ -74,7 +74,7 @@ Now we are ready to send a signal from one radio to another! Here is a brief dem
 ![](images/spectrum.gif)
 
 
-* First, a live view of what the receiver sees will show no meaningful transmission - just the "noise floor".
+* First, a live view from the receiver will show no meaningful transmission - just the "noise floor".
 * Then, once we start the transmitter, the receiver will show a signal at a 250 kHz offset from the center.
 * After we stop the transmitter, the signal will disappear and we will just see noise floor again.
 
